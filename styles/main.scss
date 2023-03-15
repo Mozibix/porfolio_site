@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import "./colors";
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    100deg,
+    #000000 0%,
+    #272727 44.03%,
+    #494949 99.99%,
+    #727272 100%
+  );
+  color: white;
+  ul {
+    list-style: none;
+  }
+
+  /*---------------------- NAV STYLES-------- */
+  nav {
+    .nav_inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+      padding: 1.2rem 4rem;
+      width: 100%;
+
+      .logo {
+        font-size: 3.1rem;
+        text-transform: uppercase;
+        color: #f2f2f2;
+
+        p > span {
+          color: #828282;
+        }
+      }
+
+      .menu {
+        &_items {
+          display: flex;
+          align-items: center;
+          gap: 11rem;
+          font-size: 1.6rem;
+
+          ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            li {
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 0.5rem;
+
+              & > button {
+                display: flex;
+                align-items: center;
+                color: inherit;
+                gap: inherit;
+                padding: 0.7rem 2rem;
+                background: transparent;
+                font-weight: inherit;
+                font-size: inherit;
+                border: 5px solid;
+                border-image-slice: 1;
+                border-image-source: linear-gradient(
+                  180deg,
+                  rgba(112, 255, 0, 0.55) 0%,
+                  #ffffff 100%
+                );
+
+                & > span {
+                  position: relative;
+                  inset: 0.2rem 0;
+                }
+              }
+
+              & > span {
+                position: relative;
+                inset: 0.2rem 0;
+              }
+            }
+          }
+        }
+
+        &_right {
+        }
+      }
+    }
+  }
+}
