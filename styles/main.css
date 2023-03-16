@@ -19,6 +19,22 @@
   border: 1px solid red;
 }
 
+.container {
+  padding: 0 5rem;
+}
+
+.primary_text {
+  color: #70ff00 !important;
+}
+
+.bold_text {
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+.bold_text.margin {
+  margin-block: 3rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,40 +43,94 @@
 }
 
 body {
-  background: linear-gradient(100deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
+  background: #000;
+  height: 100%;
+  width: 100%;
   color: white;
   /*---------------------- NAV STYLES-------- */
+  /*------------------------- MAIN STYLES ------------------------------------------------------ */
 }
 body ul {
   list-style: none;
 }
 body nav .nav_inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 1rem;
   font-weight: 700;
-  padding: 1.2rem 4rem;
-  width: 100%;
+}
+@media screen and (min-width: 1600px) {
+  body nav .nav_inner {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    justify-content: space-between;
+    padding: 1.2rem 3rem;
+    max-width: 100%;
+  }
 }
 body nav .nav_inner .logo {
-  font-size: 3.1rem;
-  text-transform: uppercase;
   color: #f2f2f2;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1600px) {
+  body nav .nav_inner .logo {
+    font-size: 3.1rem;
+  }
 }
 body nav .nav_inner .logo p > span {
   color: #828282;
 }
 body nav .nav_inner .menu_items {
-  display: flex;
-  align-items: center;
-  gap: 11rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  body nav .nav_inner .menu_items {
+    position: absolute;
+    right: 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body nav .nav_inner .menu_items {
+    -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+    position: relative;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    font-size: 1.6rem;
+    padding: 0;
+    padding-right: 1rem;
+  }
 }
 body nav .nav_inner .menu_items ul {
-  display: flex;
-  justify-content: center;
+  display: grid;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  body nav .nav_inner .menu_items ul {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body nav .nav_inner .menu_items ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 0;
+  }
 }
 body nav .nav_inner .menu_items ul li {
   cursor: pointer;
@@ -68,19 +138,28 @@ body nav .nav_inner .menu_items ul li {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  width: 100%;
 }
 body nav .nav_inner .menu_items ul li > button {
   display: flex;
   align-items: center;
   color: inherit;
   gap: inherit;
-  padding: 0.7rem 2rem;
+  padding: 0.5rem 4rem;
+  border: 4px solid;
   background: transparent;
   font-weight: inherit;
   font-size: inherit;
-  border: 5px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(180deg, rgba(112, 255, 0, 0.55) 0%, #ffffff 100%);
+}
+@media screen and (min-width: 1600px) {
+  body nav .nav_inner .menu_items ul li > button {
+    padding: 0.7rem 0;
+    display: flex;
+    justify-content: center;
+    width: 13rem;
+  }
 }
 body nav .nav_inner .menu_items ul li > button > span {
   position: relative;
@@ -89,4 +168,28 @@ body nav .nav_inner .menu_items ul li > button > span {
 body nav .nav_inner .menu_items ul li > span {
   position: relative;
   inset: 0.2rem 0;
+}
+body main {
+  display: none;
+}
+body main .main_inner {
+  padding: 5rem 0;
+}
+body main .main_inner .hero_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .main_inner .hero_left p {
+  font-weight: 700;
+}
+body main .main_inner .hero_left p > span {
+  font-size: 2.4rem;
+  color: #e0e0e0;
+  line-height: 2em;
+}
+body main .main_inner .hero_left p span.big {
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: 0.1em;
 }/*# sourceMappingURL=main.css.map */

@@ -10,13 +10,16 @@
 }
 
 body {
-  background: linear-gradient(
-    100deg,
-    #000000 0%,
-    #272727 44.03%,
-    #494949 99.99%,
-    #727272 100%
-  );
+  //   background: linear-gradient(
+  //     -900deg,
+  //     #000000 0%,
+  //     #272727 44.03%,
+  //     #494949 99.99%,
+  //     #727272 100%
+  //   );
+  background: #000;
+  height: 100%;
+  width: 100%;
   color: white;
   ul {
     list-style: none;
@@ -25,17 +28,22 @@ body {
   /*---------------------- NAV STYLES-------- */
   nav {
     .nav_inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 1rem;
       font-weight: 700;
-      padding: 1.2rem 4rem;
-      width: 100%;
-
+      @media screen and (min-width: 1600px) {
+        display: flex;
+        align-items: center;
+        gap: 10rem;
+        justify-content: space-between;
+        padding: 1.2rem 3rem;
+        max-width: 100%;
+      }
       .logo {
-        font-size: 3.1rem;
-        text-transform: uppercase;
         color: #f2f2f2;
+        text-transform: uppercase;
+        @media screen and (min-width: 1600px) {
+          font-size: 3.1rem;
+        }
 
         p > span {
           color: #828282;
@@ -44,16 +52,50 @@ body {
 
       .menu {
         &_items {
-          display: flex;
-          align-items: center;
-          gap: 11rem;
-          font-size: 1.6rem;
-
-          ul {
-            display: flex;
+          font-size: 1rem;
+          border-radius: 1rem;
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(15px);
+          padding-bottom: 1.5rem;
+          @media screen and (min-width: 768px) and (max-width: 1599px) {
+            position: absolute;
+            right: 2rem;
+            display: grid;
             justify-content: center;
             align-items: center;
-            gap: 3rem;
+            width: 300px;
+            font-size: 1.3rem;
+          }
+
+          @media screen and (min-width: 1600px) {
+            backdrop-filter: unset;
+            position: relative;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10rem;
+            font-size: 1.6rem;
+            padding: 0;
+            padding-right: 1rem;
+          }
+
+          ul {
+            display: grid;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+
+            @media screen and (min-width: 768px) {
+              justify-content: center;
+            }
+
+            @media screen and (min-width: 1600px) {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 3rem;
+              margin: 0;
+            }
 
             li {
               cursor: pointer;
@@ -61,17 +103,24 @@ body {
               align-items: center;
               justify-content: center;
               gap: 0.5rem;
-
+              width: 100%;
               & > button {
+                @media screen and (min-width: 1600px) {
+                  padding: 0.7rem 0;
+                  display: flex;
+                  justify-content: center;
+                  width: 13rem;
+                }
+
                 display: flex;
                 align-items: center;
                 color: inherit;
                 gap: inherit;
-                padding: 0.7rem 2rem;
+                padding: 0.5rem 4rem;
+                border: 4px solid;
                 background: transparent;
                 font-weight: inherit;
                 font-size: inherit;
-                border: 5px solid;
                 border-image-slice: 1;
                 border-image-source: linear-gradient(
                   180deg,
@@ -92,8 +141,39 @@ body {
             }
           }
         }
+      }
+    }
+  }
 
-        &_right {
+  /*------------------------- MAIN STYLES ------------------------------------------------------ */
+  main {
+    display: none;
+    .main_inner {
+      padding: 5rem 0;
+
+      .hero {
+        &_inner {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        &_left {
+          p {
+            font-weight: 700;
+
+            & > span {
+              font-size: 2.4rem;
+              color: #e0e0e0;
+              line-height: 2em;
+            }
+
+            span.big {
+              font-size: 5rem;
+              line-height: 5rem;
+              letter-spacing: 0.1em;
+            }
+          }
         }
       }
     }

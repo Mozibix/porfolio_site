@@ -14,3 +14,20 @@
 .border {
   border: 1px solid red;
 }
+
+.container {
+  padding: 0 5rem;
+}
+
+.primary_text {
+  color: $primary !important;
+}
+
+.bold_text {
+  font-weight: 700;
+  font-size: 3.5rem;
+
+  &.margin {
+    margin-block: 3rem;
+  }
+}
