@@ -101,12 +101,16 @@ body nav .nav_inner .menu_items {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   padding-block: 0.5rem 1.5rem;
+  display: none;
+}
+body nav .nav_inner .menu_items.open {
+  display: block;
 }
 @media screen and (min-width: 768px) and (max-width: 1599px) {
   body nav .nav_inner .menu_items {
     position: absolute;
     right: 1rem;
-    display: grid;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 300px;
@@ -115,11 +119,12 @@ body nav .nav_inner .menu_items {
 }
 @media screen and (min-width: 1600px) {
   body nav .nav_inner .menu_items {
+    all: unset;
     -webkit-backdrop-filter: unset;
             backdrop-filter: unset;
     position: relative;
     background: transparent;
-    display: flex;
+    display: flex !important;
     align-items: center;
     gap: 10rem;
     font-size: 1.6rem;

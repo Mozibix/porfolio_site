@@ -54,15 +54,19 @@ body {
 
       .menu {
         &_items {
+          &.open {
+            display: block;
+          }
           font-size: 1rem;
           border-radius: 1rem;
           background: rgba(255, 255, 255, 0.1);
           backdrop-filter: blur(15px);
           padding-block: 0.5rem 1.5rem;
+          display: none;
           @media screen and (min-width: 768px) and (max-width: 1599px) {
             position: absolute;
             right: 1rem;
-            display: grid;
+            display: none;
             justify-content: center;
             align-items: center;
             width: 300px;
@@ -70,10 +74,11 @@ body {
           }
 
           @media screen and (min-width: 1600px) {
+            all: unset;
             backdrop-filter: unset;
             position: relative;
             background: transparent;
-            display: flex;
+            display: flex !important;
             align-items: center;
             gap: 10rem;
             font-size: 1.6rem;
