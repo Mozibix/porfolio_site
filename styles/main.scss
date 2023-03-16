@@ -10,14 +10,13 @@
 }
 
 body {
-  //   background: linear-gradient(
-  //     -900deg,
-  //     #000000 0%,
-  //     #272727 44.03%,
-  //     #494949 99.99%,
-  //     #727272 100%
-  //   );
-  background: #000;
+  background: linear-gradient(
+    -900deg,
+    #000000 0%,
+    #272727 44.03%,
+    #494949 99.99%,
+    #727272 100%
+  );
   height: 100%;
   width: 100%;
   color: white;
@@ -40,7 +39,10 @@ body {
       }
       .logo {
         color: #f2f2f2;
+        display: flex;
+        justify-content: space-between;
         text-transform: uppercase;
+        font-size: 2rem;
         @media screen and (min-width: 1600px) {
           font-size: 3.1rem;
         }
@@ -56,10 +58,10 @@ body {
           border-radius: 1rem;
           background: rgba(255, 255, 255, 0.1);
           backdrop-filter: blur(15px);
-          padding-bottom: 1.5rem;
+          padding-block: 0.5rem 1.5rem;
           @media screen and (min-width: 768px) and (max-width: 1599px) {
             position: absolute;
-            right: 2rem;
+            right: 1rem;
             display: grid;
             justify-content: center;
             align-items: center;
