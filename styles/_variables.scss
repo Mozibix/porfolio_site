@@ -16,7 +16,11 @@
 }
 
 .container {
-  padding: 0 5rem;
+  padding: 0 20%;
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 5rem;
+  }
 }
 
 .primary_text {
@@ -24,11 +28,18 @@
 }
 
 .bold_text {
+  @media screen and (min-width: 1200px) {
+    font-size: 3.5rem;
+  }
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 2rem;
 
   &.margin {
-    margin-block: 3rem;
+    margin-block: 2rem;
+
+    @media screen and (min-width: 1200px) {
+      margin-block: 3rem;
+    }
   }
 }
 

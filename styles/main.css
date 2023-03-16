@@ -20,7 +20,12 @@
 }
 
 .container {
-  padding: 0 5rem;
+  padding: 0 20%;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 5rem;
+  }
 }
 
 .primary_text {
@@ -29,10 +34,20 @@
 
 .bold_text {
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .bold_text {
+    font-size: 3.5rem;
+  }
 }
 .bold_text.margin {
-  margin-block: 3rem;
+  margin-block: 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .bold_text.margin {
+    margin-block: 3rem;
+  }
 }
 
 .toogle_btn {
@@ -189,16 +204,20 @@ body nav .nav_inner .menu_items ul li > span {
   position: relative;
   inset: 0.2rem 0;
 }
-body main {
-  display: none;
-}
 body main .main_inner {
-  padding: 5rem 0;
+  padding: 2.5rem 0;
 }
-body main .main_inner .hero_inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media screen and (min-width: 1200px) {
+  body main .main_inner {
+    padding: 5rem 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body main .main_inner .hero_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 body main .main_inner .hero_left p {
   font-weight: 700;
@@ -206,10 +225,29 @@ body main .main_inner .hero_left p {
 body main .main_inner .hero_left p > span {
   font-size: 2.4rem;
   color: #e0e0e0;
-  line-height: 2em;
+  line-height: 1.5em;
+}
+@media screen and (min-width: 1200px) {
+  body main .main_inner .hero_left p > span {
+    line-height: 2em;
+  }
 }
 body main .main_inner .hero_left p span.big {
-  font-size: 5rem;
-  line-height: 5rem;
+  font-size: 2.5rem;
+  line-height: 4rem;
   letter-spacing: 0.1em;
+}
+@media screen and (min-width: 1200px) {
+  body main .main_inner .hero_left p span.big {
+    line-height: 5rem;
+    font-size: 5rem;
+  }
+}
+body main .main_inner .hero_right {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  body main .main_inner .hero_right {
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */

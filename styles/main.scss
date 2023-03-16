@@ -154,15 +154,18 @@ body {
 
   /*------------------------- MAIN STYLES ------------------------------------------------------ */
   main {
-    display: none;
     .main_inner {
-      padding: 5rem 0;
-
+      padding: 2.5rem 0;
+      @media screen and (min-width: 1200px) {
+        padding: 5rem 0;
+      }
       .hero {
         &_inner {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
+          @media screen and (min-width: 1200px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
         }
 
         &_left {
@@ -172,14 +175,30 @@ body {
             & > span {
               font-size: 2.4rem;
               color: #e0e0e0;
-              line-height: 2em;
+              line-height: 1.5em;
+
+              @media screen and (min-width: 1200px) {
+                line-height: 2em;
+              }
             }
 
             span.big {
-              font-size: 5rem;
-              line-height: 5rem;
+              font-size: 2.5rem;
+              line-height: 4rem;
               letter-spacing: 0.1em;
+
+              @media screen and (min-width: 1200px) {
+                line-height: 5rem;
+                font-size: 5rem;
+              }
             }
+          }
+        }
+
+        &_right {
+          display: none;
+          @media screen and (min-width: 1200px) {
+            display: block;
           }
         }
       }
