@@ -104,7 +104,7 @@ body {
       font-size: 1rem;
       border-radius: 1rem;
       z-index: 10;
-      background: rgba(0, 0, 0, 0.4);
+      background: $secondary;
       backdrop-filter: blur(20px);
       height: 0;
       width: 100%;
@@ -124,7 +124,6 @@ body {
 
       &.open {
         height: 20rem;
-        border: 1px solid red;
       }
 
       ul {
