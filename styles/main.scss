@@ -156,9 +156,8 @@ body {
       &_inner {
         padding: 2.5rem 1rem;
         display: grid;
-        gap: auto;
+        gap: 4rem;
         max-height: 90%;
-        border: 1px solid red;
         @media screen and (min-width: 576px) {
           padding: 2.5rem 5rem;
         }
@@ -247,7 +246,7 @@ body {
   }
 
   &.margin {
-    margin: 1rem 0;
+    margin-block: 1rem 0;
   }
 }
 
@@ -256,7 +255,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid red;
   padding: 1rem;
   width: 100%;
 }

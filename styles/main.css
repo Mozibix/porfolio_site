@@ -140,9 +140,8 @@ body header .dropdown_menu ul li > img {
 body main .hero_inner {
   padding: 2.5rem 1rem;
   display: grid;
-  gap: auto;
+  gap: 4rem;
   max-height: 90%;
-  border: 1px solid red;
 }
 @media screen and (min-width: 576px) {
   body main .hero_inner {
@@ -230,7 +229,7 @@ body main .hero_top_right {
   }
 }
 .small_text.margin {
-  margin: 1rem 0;
+  margin-block: 1rem 0;
 }
 
 .center_element {
@@ -238,7 +237,6 @@ body main .hero_top_right {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid red;
   padding: 1rem;
   width: 100%;
 }/*# sourceMappingURL=main.css.map */
