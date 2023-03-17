@@ -141,7 +141,7 @@ body main .hero_inner {
   padding: 2.5rem 1rem;
   display: grid;
   gap: 7rem;
-  min-height: 60vh;
+  min-height: 100%;
 }
 @media screen and (min-width: 576px) {
   body main .hero_inner {
