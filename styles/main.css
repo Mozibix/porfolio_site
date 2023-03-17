@@ -13,6 +13,7 @@ body {
 }
 body ul {
   list-style: none;
+  outline: none;
 }
 body header {
   position: inherit;
@@ -136,7 +137,53 @@ body header .dropdown_menu ul li > img {
     display: none;
   }
 }
-body .main {
-  color: white;
+body main .hero_left {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border: 1px solid red;
+  padding: 1rem;
+  width: 100%;
+}
+body main .hero_left p {
+  text-align: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  letter-spacing: 0em;
+  color: #f2f2f2;
+}
+@media screen and (min-width: 576px) {
+  body main .hero_left p > span.middle_text {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 576px) {
+  body main .hero_left p.right_text {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+body main .hero_right {
+  display: none;
+}
+
+/* --------------------VARIABLES-------------------- */
+.primary_text {
+  color: #70ff00;
+}
+.primary_text.big {
+  font-size: 4rem;
+}
+@media screen and (min-width: 400px) {
+  .primary_text.big {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  .primary_text.big {
+    font-size: 4rem;
+  }
 }/*# sourceMappingURL=main.css.map */
