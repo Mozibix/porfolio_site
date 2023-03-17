@@ -141,7 +141,8 @@ body main .hero_inner {
   padding: 2.5rem 1rem;
   display: grid;
   gap: 7rem;
-  min-height: 100%;
+  max-height: 90%;
+  border: 1px solid red;
 }
 @media screen and (min-width: 576px) {
   body main .hero_inner {
@@ -229,7 +230,7 @@ body main .hero_top_right {
   }
 }
 .small_text.margin {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .center_element {
