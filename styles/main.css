@@ -109,10 +109,14 @@ body header .dropdown_menu {
   }
 }
 body header .dropdown_menu.open {
-  height: 45%;
+  height: 50%;
+}
+@media screen and (min-width: 576px) {
+  body header .dropdown_menu.open {
+    height: 45%;
+  }
 }
 body header .dropdown_menu ul {
-  padding: 0.7rem 0;
   text-align: center;
   display: grid;
   gap: 1.5rem;

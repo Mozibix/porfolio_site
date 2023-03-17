@@ -120,11 +120,13 @@ body {
       }
 
       &.open {
-        height: 45%;
+        height: 50%;
+        @media screen and (min-width: 576px) {
+          height: 45%;
+        }
       }
 
       ul {
-        padding: 0.7rem 0;
         text-align: center;
         display: grid;
         gap: 1.5rem;
