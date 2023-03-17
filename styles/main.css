@@ -101,6 +101,7 @@ body header .dropdown_menu {
   font-size: 1.5rem;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 100;
 }
 @media screen and (min-width: 576px) {
   body header .dropdown_menu {
