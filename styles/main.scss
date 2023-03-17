@@ -18,6 +18,7 @@ body {
   }
   /* --------------------------------------HEADER-------------------------------------- */
   header {
+    position: inherit;
     .navbar {
       ul {
         display: flex;
@@ -102,8 +103,9 @@ body {
       top: 4rem;
       font-size: 1rem;
       border-radius: 1rem;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(35px);
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(16.5px);
       height: 0;
       width: 100%;
       display: flex;
@@ -149,5 +151,10 @@ body {
         display: none;
       }
     }
+  }
+
+  .main {
+    color: white;
+    border: 1px solid red;
   }
 }
