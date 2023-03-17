@@ -63,7 +63,7 @@ body {
           font-size: 1.5rem;
           line-height: 3.5rem;
           letter-spacing: 0em;
-          color: $light_white;
+          color: $light_logotext;
 
           p > span {
             color: $light_dark;
@@ -154,25 +154,33 @@ body {
   main {
     .hero {
       &_inner {
+        padding: 2.5rem 1rem;
+        display: grid;
+        gap: 7rem;
+        min-height: 60vh;
+        @media screen and (min-width: 576px) {
+          padding: 2.5rem 5rem;
+        }
+        .hero {
+          &_bottom {
+            padding: 1rem 0;
+            width: 100%;
+          }
+        }
       }
 
-      &_left {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border: 1px solid red;
-        padding: 1rem;
+      &_top_left {
         width: 100%;
         p {
-          // font-size: 2.5rem;
           text-align: inherit;
           font-size: 2rem;
           font-weight: 700;
           line-height: 3.5rem;
           letter-spacing: 0em;
           color: $light_white;
-
+          @media screen and (min-width: 576px) {
+            font-size: 2.5rem;
+          }
           & > span {
             &.middle_text {
               @media screen and (min-width: 576px) {
@@ -190,7 +198,7 @@ body {
         }
       }
 
-      &_right {
+      &_top_right {
         display: none;
       }
     }
@@ -208,7 +216,46 @@ body {
       font-size: 3rem;
     }
     @media screen and (min-width: 576px) {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   }
+
+  &.header_text {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 57px;
+    letter-spacing: 0em;
+    text-align: left;
+    @media screen and (min-width: 576px) {
+      font-size: 3rem;
+    }
+
+    & > span {
+      color: $light_white;
+    }
+  }
+}
+
+.small_text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
+  @media screen and (min-width: 576px) {
+    font-size: 1.5rem;
+  }
+
+  &.margin {
+    margin: 2rem 0;
+  }
+}
+
+.center_element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid red;
+  padding: 1rem;
+  width: 100%;
 }

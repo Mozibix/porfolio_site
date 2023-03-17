@@ -137,36 +137,50 @@ body header .dropdown_menu ul li > img {
     display: none;
   }
 }
-body main .hero_left {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid red;
-  padding: 1rem;
+body main .hero_inner {
+  padding: 2.5rem 1rem;
+  display: grid;
+  gap: 7rem;
+  min-height: 60vh;
+}
+@media screen and (min-width: 576px) {
+  body main .hero_inner {
+    padding: 2.5rem 5rem;
+  }
+}
+body main .hero_inner .hero_bottom {
+  padding: 1rem 0;
   width: 100%;
 }
-body main .hero_left p {
+body main .hero_top_left {
+  width: 100%;
+}
+body main .hero_top_left p {
   text-align: inherit;
   font-size: 2rem;
   font-weight: 700;
   line-height: 3.5rem;
   letter-spacing: 0em;
-  color: #f2f2f2;
+  color: #e0e0e0;
 }
 @media screen and (min-width: 576px) {
-  body main .hero_left p > span.middle_text {
+  body main .hero_top_left p {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  body main .hero_top_left p > span.middle_text {
     display: flex;
     justify-content: center;
   }
 }
 @media screen and (min-width: 576px) {
-  body main .hero_left p.right_text {
+  body main .hero_top_left p.right_text {
     display: flex;
     justify-content: flex-end;
   }
 }
-body main .hero_right {
+body main .hero_top_right {
   display: none;
 }
 
@@ -184,6 +198,46 @@ body main .hero_right {
 }
 @media screen and (min-width: 576px) {
   .primary_text.big {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
+}
+.primary_text.header_text {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@media screen and (min-width: 576px) {
+  .primary_text.header_text {
+    font-size: 3rem;
+  }
+}
+.primary_text.header_text > span {
+  color: #e0e0e0;
+}
+
+.small_text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@media screen and (min-width: 576px) {
+  .small_text {
+    font-size: 1.5rem;
+  }
+}
+.small_text.margin {
+  margin: 2rem 0;
+}
+
+.center_element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid red;
+  padding: 1rem;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
