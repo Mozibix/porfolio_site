@@ -114,13 +114,13 @@ body header .dropdown_menu {
   }
 }
 body header .dropdown_menu.open {
-  height: 25rem;
+  height: 20rem;
   border: 1px solid red;
 }
 body header .dropdown_menu ul {
   text-align: center;
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 body header .dropdown_menu ul li {
   cursor: pointer;
