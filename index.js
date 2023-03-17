@@ -1,10 +1,9 @@
 const toogleBtn = document.querySelector(".toogle_btn");
 const toogleBtnIcon = document.querySelector(".toogle_btn i");
-const menu = document.querySelector(".menu_items");
+const menu = document.querySelector(".dropdown_menu");
 
 toogleBtn.onclick = () => {
   menu.classList.toggle("open");
-  console.log(menu);
 
   const isOpen = menu.classList.contains("open");
 
