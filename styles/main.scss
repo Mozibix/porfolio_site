@@ -156,7 +156,7 @@ body {
       &_inner {
         padding: 2.5rem 1rem;
         display: grid;
-        gap: 7rem;
+        gap: auto;
         max-height: 90%;
         border: 1px solid red;
         @media screen and (min-width: 576px) {

@@ -140,7 +140,7 @@ body header .dropdown_menu ul li > img {
 body main .hero_inner {
   padding: 2.5rem 1rem;
   display: grid;
-  gap: 7rem;
+  gap: auto;
   max-height: 90%;
   border: 1px solid red;
 }
