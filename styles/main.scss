@@ -156,12 +156,28 @@ body {
       &_inner {
         padding: 2.5rem 1rem;
         display: grid;
-        gap: 4rem;
+        gap: 5rem;
         max-height: 90%;
         @media screen and (min-width: 576px) {
           padding: 2.5rem 5rem;
         }
+        @media screen and (min-width: 992px) {
+          padding: 2.5rem 5%;
+        }
+        @media screen and (min-width: 1200px) {
+          padding: 2.5rem 8%;
+        }
+
         .hero {
+          &_top {
+            @media screen and (min-width: 992px) {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 5rem;
+            }
+          }
+
           &_bottom {
             padding: 1rem 0;
             width: 100%;
@@ -181,11 +197,20 @@ body {
           @media screen and (min-width: 576px) {
             font-size: 2.5rem;
           }
+
+          @media screen and (min-width: 1200px) {
+            font-size: 3.5rem;
+            line-height: 4.5rem;
+          }
           & > span {
             &.middle_text {
               @media screen and (min-width: 576px) {
                 display: flex;
                 justify-content: center;
+              }
+              @media screen and (min-width: 992px) {
+                display: grid;
+                justify-content: flex-start;
               }
             }
           }
@@ -194,12 +219,33 @@ body {
               display: flex;
               justify-content: flex-end;
             }
+
+            @media screen and (min-width: 992px) {
+              justify-content: flex-start;
+            }
           }
         }
       }
 
       &_top_right {
         display: none;
+
+        @media screen and (min-width: 992px) {
+          display: block;
+        }
+
+        &_inner {
+          width: 100%;
+
+          img {
+            width: 23rem;
+            height: 100%;
+
+            @media screen and (min-width: 1200px) {
+              width: 26rem;
+            }
+          }
+        }
       }
     }
   }
@@ -218,12 +264,16 @@ body {
     @media screen and (min-width: 576px) {
       font-size: 3.5rem;
     }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 4.5rem;
+    }
   }
 
   &.header_text {
     font-size: 2rem;
     font-weight: 700;
-    line-height: 57px;
+    line-height: 3.5rem;
     letter-spacing: 0em;
     text-align: left;
     @media screen and (min-width: 576px) {
@@ -258,3 +308,25 @@ body {
   padding: 1rem;
   width: 100%;
 }
+
+/* media screens */
+
+/* 
+             @media screen and (min-width: 1200px) {
+
+             }
+
+     @media screen and (min-width: 992px) {
+
+        } 
+        
+        @media screen and (min-width: 576px) {
+          
+        } 
+        
+        @media screen and (min-width: 400px) {
+          
+        } 
+        
+        
+        */

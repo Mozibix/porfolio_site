@@ -140,12 +140,30 @@ body header .dropdown_menu ul li > img {
 body main .hero_inner {
   padding: 2.5rem 1rem;
   display: grid;
-  gap: 4rem;
+  gap: 5rem;
   max-height: 90%;
 }
 @media screen and (min-width: 576px) {
   body main .hero_inner {
     padding: 2.5rem 5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  body main .hero_inner {
+    padding: 2.5rem 5%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body main .hero_inner {
+    padding: 2.5rem 8%;
+  }
+}
+@media screen and (min-width: 992px) {
+  body main .hero_inner .hero_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
   }
 }
 body main .hero_inner .hero_bottom {
@@ -168,10 +186,22 @@ body main .hero_top_left p {
     font-size: 2.5rem;
   }
 }
+@media screen and (min-width: 1200px) {
+  body main .hero_top_left p {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+  }
+}
 @media screen and (min-width: 576px) {
   body main .hero_top_left p > span.middle_text {
     display: flex;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  body main .hero_top_left p > span.middle_text {
+    display: grid;
+    justify-content: flex-start;
   }
 }
 @media screen and (min-width: 576px) {
@@ -180,8 +210,30 @@ body main .hero_top_left p {
     justify-content: flex-end;
   }
 }
+@media screen and (min-width: 992px) {
+  body main .hero_top_left p.right_text {
+    justify-content: flex-start;
+  }
+}
 body main .hero_top_right {
   display: none;
+}
+@media screen and (min-width: 992px) {
+  body main .hero_top_right {
+    display: block;
+  }
+}
+body main .hero_top_right_inner {
+  width: 100%;
+}
+body main .hero_top_right_inner img {
+  width: 23rem;
+  height: 100%;
+}
+@media screen and (min-width: 1200px) {
+  body main .hero_top_right_inner img {
+    width: 26rem;
+  }
 }
 
 /* --------------------VARIABLES-------------------- */
@@ -201,10 +253,15 @@ body main .hero_top_right {
     font-size: 3.5rem;
   }
 }
+@media screen and (min-width: 1200px) {
+  .primary_text.big {
+    font-size: 4.5rem;
+  }
+}
 .primary_text.header_text {
   font-size: 2rem;
   font-weight: 700;
-  line-height: 57px;
+  line-height: 3.5rem;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -239,4 +296,25 @@ body main .hero_top_right {
   transform: translate(-50%, -50%);
   padding: 1rem;
   width: 100%;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* media screens */
+/* 
+             @media screen and (min-width: 1200px) {
+
+             }
+
+     @media screen and (min-width: 992px) {
+
+        } 
+
+        @media screen and (min-width: 576px) {
+
+        } 
+
+        @media screen and (min-width: 400px) {
+
+        } 
+
+
+        *//*# sourceMappingURL=main.css.map */
