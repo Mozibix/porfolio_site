@@ -93,7 +93,9 @@ body header .dropdown_menu {
   font-size: 1rem;
   border-radius: 1rem;
   z-index: 10;
-  background: #000;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   height: 0;
   width: 100%;
   display: flex;
@@ -112,12 +114,8 @@ body header .dropdown_menu {
   }
 }
 body header .dropdown_menu.open {
-  height: 50%;
-}
-@media screen and (min-width: 576px) {
-  body header .dropdown_menu.open {
-    height: 45%;
-  }
+  height: 25rem;
+  border: 1px solid red;
 }
 body header .dropdown_menu ul {
   text-align: center;
