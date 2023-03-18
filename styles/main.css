@@ -12,14 +12,17 @@ body {
   color: white;
   /* --------------------------------------HEADER-------------------------------------- */
   /* --------------------------------------MAIN--------------------------------------  */
+  /* --------------------------------SKILLS SECTION-------------------------------- */
 }
 body ul {
   list-style: none;
   outline: none;
 }
+body .top_sec_body {
+  background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
+}
 body header {
   position: relative;
-  background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
   /* DROPDOWN MENU */
 }
 body header .navbar {
@@ -29,7 +32,7 @@ body header .navbar {
 }
 @media screen and (min-width: 576px) {
   body header .navbar {
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem 1.5rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -129,8 +132,9 @@ body header .dropdown_menu {
 }
 @media screen and (min-width: 576px) {
   body header .dropdown_menu {
-    right: 2rem;
+    right: 1rem;
     width: 300px;
+    border-radius: 1rem;
   }
 }
 body header .dropdown_menu.open {
@@ -156,44 +160,48 @@ body header .dropdown_menu ul li > img {
     display: none;
   }
 }
-body main .hero {
-  background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
-}
-body main .hero_inner {
+body .hero_inner {
   padding: 2.5rem 1rem;
   display: grid;
   gap: 5rem;
   max-height: 90%;
 }
 @media screen and (min-width: 576px) {
-  body main .hero_inner {
-    padding: 2.5rem 5rem;
+  body .hero_inner {
+    padding: 2rem;
   }
 }
 @media screen and (min-width: 992px) {
-  body main .hero_inner {
+  body .hero_inner {
     padding: 2.5rem 5%;
+    gap: 4rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  body main .hero_inner {
+  body .hero_inner {
     padding: 2.5rem 6%;
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  body .hero_inner .hero_top {
+    padding: 0 3rem;
   }
 }
 @media screen and (min-width: 992px) {
-  body main .hero_inner .hero_top {
+  body .hero_inner .hero_top {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
   }
 }
-body main .hero_inner .hero_bottom {
+body .hero_inner .hero_bottom {
   padding: 1rem 0;
   width: 100%;
 }
 @media screen and (min-width: 992px) {
-  body main .hero_inner .hero_bottom {
+  body .hero_inner .hero_bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -201,28 +209,28 @@ body main .hero_inner .hero_bottom {
   }
 }
 @media screen and (min-width: 1200px) {
-  body main .hero_inner .hero_bottom {
+  body .hero_inner .hero_bottom {
     gap: 5rem;
   }
 }
 @media screen and (min-width: 1600px) {
-  body main .hero_inner .hero_bottom {
+  body .hero_inner .hero_bottom {
     gap: 7rem;
   }
 }
 @media screen and (min-width: 1800px) {
-  body main .hero_inner .hero_bottom {
+  body .hero_inner .hero_bottom {
     gap: 12rem;
   }
 }
-body main .hero_inner .hero_bottom_left {
+body .hero_inner .hero_bottom_left {
   width: 100%;
 }
-body main .hero_inner .hero_bottom_right {
+body .hero_inner .hero_bottom_right {
   display: none;
 }
 @media screen and (min-width: 992px) {
-  body main .hero_inner .hero_bottom_right {
+  body .hero_inner .hero_bottom_right {
     display: block;
     font-family: "Courier Prime", monospace;
     display: grid;
@@ -230,7 +238,7 @@ body main .hero_inner .hero_bottom_right {
     margin-top: 6%;
   }
 }
-body main .hero_inner .hero_bottom_right .bottom_box {
+body .hero_inner .hero_bottom_right .bottom_box {
   height: 7rem;
   width: 21.5rem;
   background: #4f4f4f;
@@ -239,30 +247,30 @@ body main .hero_inner .hero_bottom_right .bottom_box {
   padding: 1rem;
 }
 @media screen and (min-width: 1200px) {
-  body main .hero_inner .hero_bottom_right .bottom_box {
+  body .hero_inner .hero_bottom_right .bottom_box {
     width: 26rem;
   }
 }
 @media screen and (min-width: 1600px) {
-  body main .hero_inner .hero_bottom_right .bottom_box {
+  body .hero_inner .hero_bottom_right .bottom_box {
     width: 30rem;
   }
 }
 @media screen and (min-width: 1800px) {
-  body main .hero_inner .hero_bottom_right .bottom_box {
+  body .hero_inner .hero_bottom_right .bottom_box {
     width: 35rem;
   }
 }
-body main .hero_inner .hero_bottom_right .bottom_box_inner {
+body .hero_inner .hero_bottom_right .bottom_box_inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body main .hero_inner .hero_bottom_right .bottom_box_inner .left_box {
+body .hero_inner .hero_bottom_right .bottom_box_inner .left_box {
   display: grid;
   gap: 0.5rem;
 }
-body main .hero_inner .hero_bottom_right .bottom_box .box_header {
+body .hero_inner .hero_bottom_right .bottom_box .box_header {
   font-family: "Courier Prime";
   font-style: normal;
   font-weight: 700;
@@ -270,11 +278,11 @@ body main .hero_inner .hero_bottom_right .bottom_box .box_header {
   line-height: 2.5rem;
 }
 @media screen and (min-width: 1200px) {
-  body main .hero_inner .hero_bottom_right .bottom_box .box_header {
+  body .hero_inner .hero_bottom_right .bottom_box .box_header {
     font-size: 1.7rem;
   }
 }
-body main .hero_inner .hero_bottom_right .bottom_box .link_text {
+body .hero_inner .hero_bottom_right .bottom_box .link_text {
   font-family: "Courier Prime";
   font-style: normal;
   font-weight: 400;
@@ -284,14 +292,14 @@ body main .hero_inner .hero_bottom_right .bottom_box .link_text {
   color: #70ff00;
 }
 @media screen and (min-width: 1200px) {
-  body main .hero_inner .hero_bottom_right .bottom_box .link_text {
+  body .hero_inner .hero_bottom_right .bottom_box .link_text {
     font-size: 1.6rem;
   }
 }
-body main .hero_top_left {
+body .hero_top_left {
   width: 100%;
 }
-body main .hero_top_left p {
+body .hero_top_left p {
   text-align: inherit;
   font-size: 2rem;
   font-weight: 700;
@@ -300,73 +308,117 @@ body main .hero_top_left p {
   color: #e0e0e0;
 }
 @media screen and (min-width: 576px) {
-  body main .hero_top_left p {
+  body .hero_top_left p {
     font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  body main .hero_top_left p {
+  body .hero_top_left p {
     font-size: 3.5rem;
     line-height: 4.5rem;
   }
 }
 @media screen and (min-width: 1600px) {
-  body main .hero_top_left p {
+  body .hero_top_left p {
     font-size: 4rem;
     line-height: 5.5rem;
   }
 }
 @media screen and (min-width: 576px) {
-  body main .hero_top_left p > span.middle_text {
+  body .hero_top_left p > span.middle_text {
     display: flex;
     justify-content: center;
   }
 }
 @media screen and (min-width: 992px) {
-  body main .hero_top_left p > span.middle_text {
+  body .hero_top_left p > span.middle_text {
     display: grid;
     justify-content: flex-start;
   }
 }
 @media screen and (min-width: 576px) {
-  body main .hero_top_left p.right_text {
+  body .hero_top_left p.right_text {
     display: flex;
     justify-content: flex-end;
   }
 }
 @media screen and (min-width: 992px) {
-  body main .hero_top_left p.right_text {
+  body .hero_top_left p.right_text {
     justify-content: flex-start;
   }
 }
-body main .hero_top_right {
+body .hero_top_right {
   display: none;
 }
 @media screen and (min-width: 992px) {
-  body main .hero_top_right {
+  body .hero_top_right {
     display: block;
   }
 }
-body main .hero_top_right_inner {
+body .hero_top_right_inner {
   width: 100%;
 }
-body main .hero_top_right_inner img {
+body .hero_top_right_inner img {
   width: 23rem;
   height: 100%;
 }
 @media screen and (min-width: 1200px) {
-  body main .hero_top_right_inner img {
+  body .hero_top_right_inner img {
     width: 26rem;
   }
 }
 @media screen and (min-width: 1600px) {
-  body main .hero_top_right_inner img {
+  body .hero_top_right_inner img {
     width: 30rem;
   }
 }
 @media screen and (min-width: 1800px) {
-  body main .hero_top_right_inner img {
+  body .hero_top_right_inner img {
     width: 40rem;
+  }
+}
+body .skills_sec {
+  width: 100%;
+  height: 100%;
+}
+body .skills_sec_inner {
+  display: grid;
+  gap: 1rem;
+}
+@media screen and (min-width: 576px) {
+  body .skills_sec_inner {
+    gap: 3rem;
+  }
+}
+body .skills_sec_inner .skills_logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+@media screen and (min-width: 576px) {
+  body .skills_sec_inner .skills_logos {
+    gap: 2.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .skills_sec_inner .skills_logos {
+    gap: 3.5rem;
+  }
+}
+body .skills_sec_inner .skills_logos img {
+  aspect-ratio: 1/1;
+  width: 2rem;
+}
+@media screen and (min-width: 576px) {
+  body .skills_sec_inner .skills_logos img {
+    width: 5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .skills_sec_inner .skills_logos img {
+    width: 7.5rem;
   }
 }
 
@@ -435,6 +487,25 @@ body main .hero_top_right_inner img {
   transform: translate(-50%, -50%);
   padding: 1rem;
   width: 100%;
+}
+
+.container_main {
+  padding: 2rem 1rem;
+}
+@media screen and (min-width: 576px) {
+  .container_main {
+    padding: 3rem 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container_main {
+    padding: 3.5rem 5%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container_main {
+    padding: 4rem 6%;
+  }
 }
 
 /* media screens */

@@ -18,9 +18,8 @@ body {
     list-style: none;
     outline: none;
   }
-  /* --------------------------------------HEADER-------------------------------------- */
-  header {
-    position: relative;
+
+  .top_sec_body {
     background: linear-gradient(
       130.36deg,
       #000000 0%,
@@ -28,12 +27,16 @@ body {
       #494949 99.99%,
       #727272 100%
     );
+  }
+  /* --------------------------------------HEADER-------------------------------------- */
+  header {
+    position: relative;
     .navbar {
       width: 100%;
       padding: 0.5rem 1rem;
       z-index: 200;
       @media screen and (min-width: 576px) {
-        padding: 0.5rem 2.5rem;
+        padding: 0.5rem 1.5rem;
       }
 
       @media screen and (min-width: 992px) {
@@ -146,8 +149,9 @@ body {
       transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
       @media screen and (min-width: 576px) {
-        right: 2rem;
+        right: 1rem;
         width: 300px;
+        border-radius: 1rem;
       }
 
       &.open {
@@ -179,213 +183,247 @@ body {
   }
 
   /* --------------------------------------MAIN--------------------------------------  */
-  main {
-    .hero {
-      background: linear-gradient(
-        130.36deg,
-        #000000 0%,
-        #272727 44.03%,
-        #494949 99.99%,
-        #727272 100%
-      );
-      &_inner {
-        padding: 2.5rem 1rem;
-        display: grid;
-        gap: 5rem;
-        max-height: 90%;
-        @media screen and (min-width: 576px) {
-          padding: 2.5rem 5rem;
-        }
-        @media screen and (min-width: 992px) {
-          padding: 2.5rem 5%;
-        }
-        @media screen and (min-width: 1200px) {
-          padding: 2.5rem 6%;
+
+  .hero {
+    &_inner {
+      padding: 2.5rem 1rem;
+      display: grid;
+      gap: 5rem;
+      max-height: 90%;
+      @media screen and (min-width: 576px) {
+        padding: 2rem;
+      }
+      @media screen and (min-width: 992px) {
+        padding: 2.5rem 5%;
+        gap: 4rem;
+      }
+      @media screen and (min-width: 1200px) {
+        padding: 2.5rem 6%;
+        gap: 3rem;
+      }
+
+      .hero {
+        &_top {
+          @media screen and (min-width: 576px) and (max-width: 992px) {
+            padding: 0 3rem;
+          }
+          @media screen and (min-width: 992px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+          }
         }
 
-        .hero {
-          &_top {
-            @media screen and (min-width: 992px) {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 5rem;
-            }
+        &_bottom {
+          padding: 1rem 0;
+          width: 100%;
+          @media screen and (min-width: 992px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
           }
 
-          &_bottom {
-            padding: 1rem 0;
+          @media screen and (min-width: 1200px) {
+            gap: 5rem;
+          }
+
+          @media screen and (min-width: 1600px) {
+            gap: 7rem;
+          }
+
+          @media screen and (min-width: 1800px) {
+            gap: 12rem;
+          }
+
+          &_left {
             width: 100%;
+          }
+
+          &_right {
+            display: none;
             @media screen and (min-width: 992px) {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              gap: 2rem;
+              display: block;
+              font-family: "Courier Prime", monospace;
+              display: grid;
+              gap: 0.5rem;
+              margin-top: 6%;
             }
 
-            @media screen and (min-width: 1200px) {
-              gap: 5rem;
-            }
+            .bottom_box {
+              height: 7rem;
+              width: 21.5rem;
+              background: #4f4f4f;
+              box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+              border-radius: 6px;
+              padding: 1rem;
 
-            @media screen and (min-width: 1600px) {
-              gap: 7rem;
-            }
-
-            @media screen and (min-width: 1800px) {
-              gap: 12rem;
-            }
-
-            &_left {
-              width: 100%;
-            }
-
-            &_right {
-              display: none;
-              @media screen and (min-width: 992px) {
-                display: block;
-                font-family: "Courier Prime", monospace;
-                display: grid;
-                gap: 0.5rem;
-                margin-top: 6%;
+              @media screen and (min-width: 1200px) {
+                width: 26rem;
+              }
+              @media screen and (min-width: 1600px) {
+                width: 30rem;
               }
 
-              .bottom_box {
-                height: 7rem;
-                width: 21.5rem;
-                background: #4f4f4f;
-                box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
-                border-radius: 6px;
-                padding: 1rem;
+              @media screen and (min-width: 1800px) {
+                width: 35rem;
+              }
+
+              &_inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .left_box {
+                  display: grid;
+                  gap: 0.5rem;
+                }
+              }
+
+              .box_header {
+                font-family: "Courier Prime";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 2.5rem;
 
                 @media screen and (min-width: 1200px) {
-                  width: 26rem;
+                  font-size: 1.7rem;
                 }
-                @media screen and (min-width: 1600px) {
-                  width: 30rem;
-                }
+              }
 
-                @media screen and (min-width: 1800px) {
-                  width: 35rem;
-                }
+              .link_text {
+                font-family: "Courier Prime";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.3rem;
+                line-height: 2rem;
+                cursor: pointer;
+                color: $primary;
 
-                &_inner {
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-
-                  .left_box {
-                    display: grid;
-                    gap: 0.5rem;
-                  }
-                }
-
-                .box_header {
-                  font-family: "Courier Prime";
-                  font-style: normal;
-                  font-weight: 700;
-                  font-size: 1.5rem;
-                  line-height: 2.5rem;
-
-                  @media screen and (min-width: 1200px) {
-                    font-size: 1.7rem;
-                  }
-                }
-
-                .link_text {
-                  font-family: "Courier Prime";
-                  font-style: normal;
-                  font-weight: 400;
-                  font-size: 1.3rem;
-                  line-height: 2rem;
-                  cursor: pointer;
-                  color: $primary;
-
-                  @media screen and (min-width: 1200px) {
-                    font-size: 1.6rem;
-                  }
-                }
-
-                p {
+                @media screen and (min-width: 1200px) {
+                  font-size: 1.6rem;
                 }
               }
             }
           }
         }
       }
+    }
 
-      &_top_left {
-        width: 100%;
-        p {
-          text-align: inherit;
-          font-size: 2rem;
-          font-weight: 700;
-          line-height: 3.5rem;
-          letter-spacing: 0em;
-          color: $light_white;
-          @media screen and (min-width: 576px) {
-            font-size: 2.5rem;
-          }
+    &_top_left {
+      width: 100%;
+      p {
+        text-align: inherit;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 3.5rem;
+        letter-spacing: 0em;
+        color: $light_white;
+        @media screen and (min-width: 576px) {
+          font-size: 2.5rem;
+        }
 
-          @media screen and (min-width: 1200px) {
-            font-size: 3.5rem;
-            line-height: 4.5rem;
-          }
+        @media screen and (min-width: 1200px) {
+          font-size: 3.5rem;
+          line-height: 4.5rem;
+        }
 
-          @media screen and (min-width: 1600px) {
-            font-size: 4rem;
-            line-height: 5.5rem;
-          }
+        @media screen and (min-width: 1600px) {
+          font-size: 4rem;
+          line-height: 5.5rem;
+        }
 
-          & > span {
-            &.middle_text {
-              @media screen and (min-width: 576px) {
-                display: flex;
-                justify-content: center;
-              }
-              @media screen and (min-width: 992px) {
-                display: grid;
-                justify-content: flex-start;
-              }
-            }
-          }
-          &.right_text {
+        & > span {
+          &.middle_text {
             @media screen and (min-width: 576px) {
               display: flex;
-              justify-content: flex-end;
+              justify-content: center;
             }
-
             @media screen and (min-width: 992px) {
+              display: grid;
               justify-content: flex-start;
             }
           }
         }
+        &.right_text {
+          @media screen and (min-width: 576px) {
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          @media screen and (min-width: 992px) {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+
+    &_top_right {
+      display: none;
+
+      @media screen and (min-width: 992px) {
+        display: block;
       }
 
-      &_top_right {
-        display: none;
+      &_inner {
+        width: 100%;
 
-        @media screen and (min-width: 992px) {
-          display: block;
+        img {
+          width: 23rem;
+          height: 100%;
+
+          @media screen and (min-width: 1200px) {
+            width: 26rem;
+          }
+
+          @media screen and (min-width: 1600px) {
+            width: 30rem;
+          }
+
+          @media screen and (min-width: 1800px) {
+            width: 40rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* --------------------------------SKILLS SECTION-------------------------------- */
+  .skills_sec {
+    width: 100%;
+    height: 100%;
+    &_inner {
+      display: grid;
+      gap: 1rem;
+
+      @media screen and (min-width: 576px) {
+        gap: 3rem;
+      }
+
+      .skills_logos {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 100%;
+
+        @media screen and (min-width: 576px) {
+          gap: 2.5rem;
         }
 
-        &_inner {
-          width: 100%;
-
-          img {
-            width: 23rem;
-            height: 100%;
-
-            @media screen and (min-width: 1200px) {
-              width: 26rem;
-            }
-
-            @media screen and (min-width: 1600px) {
-              width: 30rem;
-            }
-
-            @media screen and (min-width: 1800px) {
-              width: 40rem;
-            }
+        @media screen and (min-width: 1200px) {
+          gap: 3.5rem;
+        }
+        img {
+          aspect-ratio: 1/1;
+          width: 2rem;
+          @media screen and (min-width: 576px) {
+            width: 5rem;
+          }
+          @media screen and (min-width: 1200px) {
+            width: 7.5rem;
           }
         }
       }
@@ -452,6 +490,19 @@ body {
   transform: translate(-50%, -50%);
   padding: 1rem;
   width: 100%;
+}
+
+.container_main {
+  padding: 2rem 1rem;
+  @media screen and (min-width: 576px) {
+    padding: 3rem 2rem;
+  }
+  @media screen and (min-width: 992px) {
+    padding: 3.5rem 5%;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 4rem 6%;
+  }
 }
 
 /* media screens */
