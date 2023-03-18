@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,17 +11,36 @@ body {
   background: #000;
   color: white;
   /* --------------------------------------HEADER-------------------------------------- */
+  /* --------------------------------------MAIN--------------------------------------  */
 }
 body ul {
   list-style: none;
   outline: none;
 }
 body header {
-  position: inherit;
+  position: relative;
+  background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
+  /* DROPDOWN MENU */
 }
 body header .navbar {
   width: 100%;
   padding: 0.5rem 1rem;
+  z-index: 200;
+}
+@media screen and (min-width: 576px) {
+  body header .navbar {
+    padding: 0.5rem 2.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  body header .navbar {
+    padding: 1rem 2.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body header .navbar {
+    padding: 1.5rem 3.5%;
+  }
 }
 body header .navbar ul {
   display: flex;
@@ -41,9 +61,9 @@ body header .navbar ul li:hover {
 body header .navbar ul li > span {
   display: none;
 }
-@media screen and (min-width: 576px) {
-  body header .navbar {
-    padding: 0.5rem 2.5rem;
+@media screen and (min-width: 1200px) {
+  body header .navbar ul li > span {
+    display: block;
   }
 }
 body header .navbar_inner {
@@ -90,13 +110,16 @@ body header .navbar_inner .toogle_btn {
 }
 body header .dropdown_menu {
   position: absolute;
-  top: 4rem;
+  top: 4.5rem;
   font-size: 1rem;
-  border-radius: 1rem;
   z-index: 10;
-  background: #161616;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  border-radius: 1rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   height: 0;
   width: 100%;
   display: flex;
@@ -106,7 +129,6 @@ body header .dropdown_menu {
   font-size: 1rem;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: 100;
 }
 @media screen and (min-width: 576px) {
   body header .dropdown_menu {
@@ -137,6 +159,9 @@ body header .dropdown_menu ul li > img {
     display: none;
   }
 }
+body main .hero {
+  background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
+}
 body main .hero_inner {
   padding: 2.5rem 1rem;
   display: grid;
@@ -155,7 +180,7 @@ body main .hero_inner {
 }
 @media screen and (min-width: 1200px) {
   body main .hero_inner {
-    padding: 2.5rem 8%;
+    padding: 2.5rem 6%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -169,6 +194,102 @@ body main .hero_inner {
 body main .hero_inner .hero_bottom {
   padding: 1rem 0;
   width: 100%;
+}
+@media screen and (min-width: 992px) {
+  body main .hero_inner .hero_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body main .hero_inner .hero_bottom {
+    gap: 5rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body main .hero_inner .hero_bottom {
+    gap: 7rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  body main .hero_inner .hero_bottom {
+    gap: 12rem;
+  }
+}
+body main .hero_inner .hero_bottom_left {
+  width: 100%;
+}
+body main .hero_inner .hero_bottom_right {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  body main .hero_inner .hero_bottom_right {
+    display: block;
+    font-family: "Courier Prime", monospace;
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 6%;
+  }
+}
+body main .hero_inner .hero_bottom_right .bottom_box {
+  height: 7rem;
+  width: 21.5rem;
+  background: #4f4f4f;
+  box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 1rem;
+}
+@media screen and (min-width: 1200px) {
+  body main .hero_inner .hero_bottom_right .bottom_box {
+    width: 26rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body main .hero_inner .hero_bottom_right .bottom_box {
+    width: 30rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  body main .hero_inner .hero_bottom_right .bottom_box {
+    width: 35rem;
+  }
+}
+body main .hero_inner .hero_bottom_right .bottom_box_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .hero_inner .hero_bottom_right .bottom_box_inner .left_box {
+  display: grid;
+  gap: 0.5rem;
+}
+body main .hero_inner .hero_bottom_right .bottom_box .box_header {
+  font-family: "Courier Prime";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+@media screen and (min-width: 1200px) {
+  body main .hero_inner .hero_bottom_right .bottom_box .box_header {
+    font-size: 1.7rem;
+  }
+}
+body main .hero_inner .hero_bottom_right .bottom_box .link_text {
+  font-family: "Courier Prime";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  cursor: pointer;
+  color: #70ff00;
+}
+@media screen and (min-width: 1200px) {
+  body main .hero_inner .hero_bottom_right .bottom_box .link_text {
+    font-size: 1.6rem;
+  }
 }
 body main .hero_top_left {
   width: 100%;
@@ -190,6 +311,12 @@ body main .hero_top_left p {
   body main .hero_top_left p {
     font-size: 3.5rem;
     line-height: 4.5rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body main .hero_top_left p {
+    font-size: 4rem;
+    line-height: 5.5rem;
   }
 }
 @media screen and (min-width: 576px) {
@@ -235,6 +362,16 @@ body main .hero_top_right_inner img {
     width: 26rem;
   }
 }
+@media screen and (min-width: 1600px) {
+  body main .hero_top_right_inner img {
+    width: 30rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  body main .hero_top_right_inner img {
+    width: 40rem;
+  }
+}
 
 /* --------------------VARIABLES-------------------- */
 .primary_text {
@@ -256,6 +393,11 @@ body main .hero_top_right_inner img {
 @media screen and (min-width: 1200px) {
   .primary_text.big {
     font-size: 4.5rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .primary_text.big {
+    font-size: 5.5rem;
   }
 }
 .primary_text.header_text {
@@ -299,7 +441,16 @@ body main .hero_top_right_inner img {
 }
 
 /* media screens */
-/* 
+/*
+            @media screen and (min-width: 1800px) {
+
+            }
+
+             @media screen and (min-width: 1600px) {
+
+
+            }
+
              @media screen and (min-width: 1200px) {
 
              }
