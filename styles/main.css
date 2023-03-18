@@ -116,10 +116,7 @@ body header .dropdown_menu {
   border-radius: 1rem;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
   height: 0;
   width: 100%;
   display: flex;
