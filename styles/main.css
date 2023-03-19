@@ -428,7 +428,12 @@ body .projects_container {
 }
 @media screen and (min-width: 400px) {
   body .projects_container {
-    padding: 0 8%;
+    padding: 0 10%;
+  }
+}
+@media screen and (min-width: 600px) {
+  body .projects_container {
+    padding: 0 18%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -483,7 +488,7 @@ body .projects_preview > img {
   height: 26vh;
   border-radius: 1rem;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 400px) {
   body .projects_preview > img {
     height: 100%;
   }
@@ -492,6 +497,7 @@ body .projects_bottom {
   display: grid;
   gap: 0.2rem;
   width: 100%;
+  padding: 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   body .projects_bottom {
