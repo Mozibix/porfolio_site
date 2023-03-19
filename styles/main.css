@@ -429,11 +429,12 @@ body .projects_sec_inner {
   position: relative;
 }
 body .projects_display {
-  background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
+  overflow: hidden;
 }
 body .projects_display_inner {
   border: 1px solid #70ff00;
   border-radius: 1rem;
+  background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
   width: 100%;
 }
 body .projects_top {

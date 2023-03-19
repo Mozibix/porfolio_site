@@ -438,16 +438,17 @@ body {
     }
 
     &_display {
-      background: linear-gradient(
-        130.36deg,
-        #000000 0%,
-        #272727 44.03%,
-        #494949 99.99%,
-        #727272 100%
-      );
+      overflow: hidden;
       &_inner {
         border: 1px solid $primary;
         border-radius: 1rem;
+        background: linear-gradient(
+          130.36deg,
+          #000000 0%,
+          #272727 44.03%,
+          #494949 99.99%,
+          #727272 100%
+        );
         width: 100%;
       }
     }
