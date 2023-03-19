@@ -13,6 +13,7 @@ body {
   /* --------------------------------------HEADER-------------------------------------- */
   /* --------------------------------------MAIN--------------------------------------  */
   /* --------------------------------SKILLS SECTION-------------------------------- */
+  /* ----------------------------PROJECTS SECTION---------------------------- */
 }
 body ul {
   list-style: none;
@@ -425,17 +426,46 @@ body .projects_container {
   gap: 2rem;
   margin-top: 1rem;
 }
+@media screen and (min-width: 400px) {
+  body .projects_container {
+    padding: 0 8%;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .projects_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
+  }
+}
 body .projects_sec_inner {
   position: relative;
 }
 body .projects_display {
   overflow: hidden;
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body .projects_display {
+    overflow: visible;
+  }
+}
 body .projects_display_inner {
   border: 1px solid #70ff00;
   border-radius: 1rem;
   background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
   width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body .projects_display_inner {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    cursor: pointer;
+  }
+  body .projects_display_inner:hover {
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+  }
 }
 body .projects_top {
   border: 1px solid #70ff00;
@@ -451,11 +481,22 @@ body .projects_top {
 body .projects_preview > img {
   width: 100%;
   height: 26vh;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 576px) {
+  body .projects_preview > img {
+    height: 100%;
+  }
 }
 body .projects_bottom {
   display: grid;
   gap: 0.2rem;
-  padding: 1rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body .projects_bottom {
+    padding: 0.5rem;
+  }
 }
 body .projects_stack > ul {
   display: flex;
@@ -523,6 +564,11 @@ body .projects_stack > ul li {
 @media screen and (min-width: 576px) {
   .small_text {
     font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .small_text.projects {
+    font-size: 1em;
   }
 }
 .small_text.margin {
@@ -604,10 +650,13 @@ body .projects_stack > ul li {
   border: 2px solid #70ff00;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  width: 40%;
 }
 .action_btns > div:hover {
-  border: 3px solid #fff;
+  border: 2px solid #fff;
   color: #70ff00;
+  font-size: 1.1rem;
+  font-weight: 700;
   transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 

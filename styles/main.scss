@@ -427,11 +427,24 @@ body {
     }
   }
 
+  /* ----------------------------PROJECTS SECTION---------------------------- */
   .projects {
     &_container {
       display: grid;
       gap: 2rem;
       margin-top: 1rem;
+
+      @media screen and (min-width: 400px) {
+        padding: 0 8%;
+      }
+      @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        padding: 0;
+      }
     }
     &_sec_inner {
       position: relative;
@@ -439,6 +452,9 @@ body {
 
     &_display {
       overflow: hidden;
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        overflow: visible;
+      }
       &_inner {
         border: 1px solid $primary;
         border-radius: 1rem;
@@ -450,6 +466,13 @@ body {
           #727272 100%
         );
         width: 100%;
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+          cursor: pointer;
+          &:hover {
+            box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+          }
+        }
       }
     }
     /* TOP PREVIEW */
@@ -469,6 +492,10 @@ body {
       & > img {
         width: 100%;
         height: 26vh;
+        border-radius: 1rem;
+        @media screen and (min-width: 576px) {
+          height: 100%;
+        }
       }
     }
 
@@ -476,7 +503,10 @@ body {
     &_bottom {
       display: grid;
       gap: 0.2rem;
-      padding: 1rem;
+      width: 100%;
+      @media screen and (min-width: 768px) and (max-width: 992px) {
+        padding: 0.5rem;
+      }
     }
 
     &_stack {
@@ -543,6 +573,11 @@ body {
   text-align: left;
   @media screen and (min-width: 576px) {
     font-size: 1.5rem;
+  }
+  &.projects {
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      font-size: 1em;
+    }
   }
 
   &.margin {
@@ -622,10 +657,13 @@ body {
     border: 2px solid $primary;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    width: 40%;
 
     &:hover {
-      border: 3px solid $white;
+      border: 2px solid $white;
       color: $primary;
+      font-size: 1.1rem;
+      font-weight: 700;
       transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
   }
