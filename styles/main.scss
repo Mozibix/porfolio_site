@@ -19,7 +19,7 @@ body {
     outline: none;
   }
 
-  .top_sec_body {
+  .light_main_bg {
     background: linear-gradient(
       130.36deg,
       #000000 0%,
@@ -27,6 +27,10 @@ body {
       #494949 99.99%,
       #727272 100%
     );
+  }
+
+  .dark_preview_bg {
+    background: $black;
   }
   /* --------------------------------------HEADER-------------------------------------- */
   header {
@@ -255,9 +259,14 @@ body {
               height: 7rem;
               width: 21.5rem;
               background: #4f4f4f;
-              box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+              box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
               border-radius: 6px;
               padding: 1rem;
+              cursor: grab;
+
+              &:hover {
+                box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+              }
 
               @media screen and (min-width: 1200px) {
                 width: 26rem;
@@ -278,18 +287,6 @@ body {
                 .left_box {
                   display: grid;
                   gap: 0.5rem;
-                }
-              }
-
-              .box_header {
-                font-family: "Courier Prime";
-                font-style: normal;
-                font-weight: 700;
-                font-size: 1.5rem;
-                line-height: 2.5rem;
-
-                @media screen and (min-width: 1200px) {
-                  font-size: 1.7rem;
                 }
               }
 
@@ -429,6 +426,64 @@ body {
       }
     }
   }
+
+  .projects {
+    &_sec_inner {
+      position: relative;
+    }
+
+    &_display {
+      &_inner {
+        border: 1px solid $primary;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        width: 100%;
+      }
+    }
+    /* TOP PREVIEW */
+    &_top {
+      border: 1px solid $primary;
+      border-radius: 1rem;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      padding: 0.5rem;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    &_preview {
+      & > img {
+        width: 100%;
+        height: 26vh;
+      }
+    }
+
+    /* BOTTOM PREVIEW */
+    &_bottom {
+      display: grid;
+      gap: 0.2rem;
+      padding: 1rem;
+    }
+
+    &_stack {
+      & > ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        line-height: 1.3rem;
+        margin-block: 1rem;
+
+        li {
+          font-family: "Courier Prime";
+          font-style: normal;
+        }
+      }
+    }
+  }
 }
 
 /* --------------------VARIABLES-------------------- */
@@ -470,7 +525,7 @@ body {
 }
 
 .small_text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 0em;
   text-align: left;
@@ -480,6 +535,32 @@ body {
 
   &.margin {
     margin-block: 1rem 0;
+  }
+}
+
+.box_header {
+  font-family: "Courier Prime";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-transform: capitalize;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1.7rem;
+  }
+
+  &.small_header {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &.center {
+    text-align: center;
   }
 }
 
@@ -493,7 +574,7 @@ body {
 }
 
 .container_main {
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem;
   @media screen and (min-width: 576px) {
     padding: 3rem 2rem;
   }
@@ -502,6 +583,39 @@ body {
   }
   @media screen and (min-width: 1200px) {
     padding: 4rem 6%;
+  }
+}
+
+.action_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  &.space {
+    justify-content: space-evenly;
+  }
+
+  & img {
+    aspect-ratio: 1/1;
+    width: 1.5rem;
+  }
+
+  & span {
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  & > div {
+    border: 2px solid $primary;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &:hover {
+      border: 3px solid $white;
+      color: $primary;
+      transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
   }
 }
 
