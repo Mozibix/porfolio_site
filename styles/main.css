@@ -420,12 +420,19 @@ body .projects {
   /* TOP PREVIEW */
   /* BOTTOM PREVIEW */
 }
+body .projects_container {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1rem;
+}
 body .projects_sec_inner {
   position: relative;
 }
+body .projects_display {
+  background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
+}
 body .projects_display_inner {
   border: 1px solid #70ff00;
-  margin-bottom: 2rem;
   border-radius: 1rem;
   width: 100%;
 }

@@ -428,14 +428,25 @@ body {
   }
 
   .projects {
+    &_container {
+      display: grid;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
     &_sec_inner {
       position: relative;
     }
 
     &_display {
+      background: linear-gradient(
+        130.36deg,
+        #000000 0%,
+        #272727 44.03%,
+        #494949 99.99%,
+        #727272 100%
+      );
       &_inner {
         border: 1px solid $primary;
-        margin-bottom: 2rem;
         border-radius: 1rem;
         width: 100%;
       }
