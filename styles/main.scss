@@ -438,31 +438,6 @@ body {
 
   /* ----------------------------PROJECTS SECTION---------------------------- */
   .projects {
-    &_container {
-      display: grid;
-      gap: 2rem;
-      margin-top: 1rem;
-      @media screen and (min-width: 400px) {
-        padding: 0 10%;
-      }
-      @media screen and (min-width: 600px) {
-        padding: 0 18%;
-      }
-      @media screen and (min-width: 768px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        width: 100%;
-        padding: 0;
-      }
-
-      @media screen and (min-width: 992px) {
-        display: grid;
-        gap: 10rem;
-        margin-top: 5rem;
-      }
-    }
     &_sec_inner {
       position: relative;
     }
@@ -539,6 +514,10 @@ body {
       padding: 1rem;
       @media screen and (min-width: 768px) and (max-width: 992px) {
         padding: 0.5rem;
+      }
+
+      @media screen and (min-width: 1200px) {
+        padding: 8%;
       }
     }
 
@@ -669,6 +648,51 @@ body {
   }
 }
 
+.projects {
+  &_container {
+    display: grid;
+    gap: 2rem;
+    margin-top: 1rem;
+    @media screen and (min-width: 400px) {
+      padding: 0 10%;
+    }
+    @media screen and (min-width: 600px) {
+      padding: 0 18%;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      padding: 0;
+    }
+    @media screen and (min-width: 992px) {
+      display: grid;
+      gap: 10rem;
+      margin-top: 5rem;
+    }
+  }
+}
+
+.footer_container {
+  display: grid;
+  gap: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  padding: 0 8%;
+
+  .say_hi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+  }
+  @media screen and (min-width: 400px) {
+    padding: 0 15%;
+  }
+}
+
 .action_btns {
   display: flex;
   justify-content: center;
@@ -705,6 +729,47 @@ body {
   }
 }
 
+.footer_items {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary;
+
+        /* add animation on hover  */
+      }
+
+      & > span {
+        display: none;
+        font-family: "Courier Prime";
+        font-style: normal;
+        @media screen and (min-width: 768px) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.fa-quote-left {
+  font-size: 3rem;
+  font-weight: 600;
+  @media screen and (min-width: 900px) {
+    font-size: 4rem;
+  }
+}
 /* media screens */
 
 /*
@@ -722,8 +787,12 @@ body {
              }
 
      @media screen and (min-width: 992px) {
+       
+    }
 
-        } 
+    @media screen and (min-width: 768px) {
+
+    }
         
         @media screen and (min-width: 576px) {
           
