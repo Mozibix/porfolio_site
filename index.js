@@ -10,12 +10,30 @@ toogleBtn.onclick = () => {
   toogleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
 };
 
+/* CLICK OUTSIDE FUNCTION */
+
+const isClose = () => {
+  const isClose = menu.classList.remove("open");
+
+  toogleBtnIcon.classList = isClose ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+};
+document.onmouseover = (e) => {
+  if (!toogleBtn.contains(e.target) && !menu.contains(e.target)) {
+    isClose();
+  }
+};
 document.onclick = (e) => {
   if (!toogleBtn.contains(e.target) && !menu.contains(e.target)) {
-    const isClose = menu.classList.remove("open");
-
-    toogleBtnIcon.classList = isClose
-      ? "fa-solid fa-xmark"
-      : "fa-solid fa-bars";
+    isClose();
+  }
+};
+document.onfocus = (e) => {
+  if (!toogleBtn.contains(e.target) && !menu.contains(e.target)) {
+    isClose();
+  }
+};
+document.onscroll = (e) => {
+  if (!toogleBtn.contains(e.target) && !menu.contains(e.target)) {
+    isClose();
   }
 };
