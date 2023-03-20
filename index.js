@@ -17,17 +17,8 @@ const isClose = () => {
 
   toogleBtnIcon.classList = isClose ? "fa-solid fa-xmark" : "fa-solid fa-bars";
 };
-document.onmouseover = (e) => {
-  if (!toogleBtn.contains(e.target) && !menu.contains(e.target)) {
-    isClose();
-  }
-};
+
 document.onclick = (e) => {
-  if (!toogleBtn.contains(e.target) && !menu.contains(e.target)) {
-    isClose();
-  }
-};
-document.onfocus = (e) => {
   if (!toogleBtn.contains(e.target) && !menu.contains(e.target)) {
     isClose();
   }
