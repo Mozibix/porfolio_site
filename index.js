@@ -9,3 +9,13 @@ toogleBtn.onclick = () => {
 
   toogleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
 };
+
+document.onclick = (e) => {
+  if (!toogleBtn.contains(e.target) && !menu.contains(e.target)) {
+    const isClose = menu.classList.remove("open");
+
+    toogleBtnIcon.classList = isClose
+      ? "fa-solid fa-xmark"
+      : "fa-solid fa-bars";
+  }
+};
