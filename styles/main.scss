@@ -48,8 +48,25 @@ body {
       width: 100%;
       padding: 0.5rem 1rem;
       z-index: 200;
+
+      @media screen and (max-width: 576px) {
+      }
       @media screen and (min-width: 576px) {
         padding: 0.5rem 1.5rem;
+      }
+
+      @media screen and (max-width: 992px) {
+        position: fixed;
+        top: 0;
+        background: linear-gradient(
+          130.36deg,
+          #000000 0%,
+          #272727 44.03%,
+          #494949 99.99%,
+          #727272 100%
+        );
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
       }
 
       @media screen and (min-width: 992px) {
@@ -166,6 +183,9 @@ body {
         width: 300px;
         border-radius: 1rem;
       }
+      @media screen and (max-width: 992px) {
+        position: fixed;
+      }
 
       &.open {
         height: 20rem;
@@ -205,6 +225,9 @@ body {
       max-height: 90%;
       @media screen and (min-width: 576px) {
         padding: 2rem;
+      }
+      @media screen and (max-width: 992px) {
+        padding-top: 7rem;
       }
       @media screen and (min-width: 992px) {
         padding: 2.5rem 5%;

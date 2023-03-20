@@ -49,6 +49,15 @@ body header .navbar {
     padding: 0.5rem 1.5rem;
   }
 }
+@media screen and (max-width: 992px) {
+  body header .navbar {
+    position: fixed;
+    top: 0;
+    background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+  }
+}
 @media screen and (min-width: 992px) {
   body header .navbar {
     padding: 1rem 2.5rem;
@@ -151,6 +160,11 @@ body header .dropdown_menu {
     border-radius: 1rem;
   }
 }
+@media screen and (max-width: 992px) {
+  body header .dropdown_menu {
+    position: fixed;
+  }
+}
 body header .dropdown_menu.open {
   height: 20rem;
 }
@@ -183,6 +197,11 @@ body .hero_inner {
 @media screen and (min-width: 576px) {
   body .hero_inner {
     padding: 2rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  body .hero_inner {
+    padding-top: 7rem;
   }
 }
 @media screen and (min-width: 992px) {
