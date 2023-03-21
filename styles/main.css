@@ -376,13 +376,26 @@ body .hero_top_left p.right_text {
 }
 @media screen and (min-width: 576px) {
   body .hero_top_left p.right_text {
+    font-size: 1.8rem;
     display: flex;
     justify-content: flex-end;
   }
 }
 @media screen and (min-width: 992px) {
   body .hero_top_left p.right_text {
+    font-size: 2rem;
     justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .hero_top_left p.right_text {
+    font-size: 2.5rem;
+    line-height: 6rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  body .hero_top_left p.right_text {
+    font-size: 3rem;
   }
 }
 body .hero_top_right {
@@ -815,7 +828,9 @@ body .projects_stack > ul li {
             @media screen and (min-width: 1800px) {
 
             }
+            @media screen and (min-width: 1400px) {
 
+            }
              @media screen and (min-width: 1600px) {
 
 
