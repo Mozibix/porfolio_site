@@ -55,7 +55,7 @@ body {
         padding: 0.5rem 1.5rem;
       }
 
-      @media screen and (max-width: 992px) {
+      @media screen and (max-width: 991px) {
         position: fixed;
         top: 0;
         background: linear-gradient(
@@ -343,6 +343,7 @@ body {
 
     &_top_left {
       width: 100%;
+
       p {
         text-align: inherit;
         font-size: 2rem;
@@ -350,6 +351,16 @@ body {
         line-height: 3.5rem;
         letter-spacing: 0em;
         color: $light_white;
+
+        & > img {
+          position: relative;
+          inset: 0.8rem 0;
+          width: 4rem;
+          @media screen and (min-width: 576px) {
+            inset: 1.2rem 0;
+            width: 6rem;
+          }
+        }
         @media screen and (min-width: 576px) {
           font-size: 2.5rem;
         }
@@ -365,14 +376,38 @@ body {
         }
 
         & > span {
-          & > img {
-            position: relative;
-            inset: 1rem 0;
-            width: 8%;
-            @media screen and (min-width: 992px) {
-              width: 12%;
-            }
+          &.span_container {
+            width: 100%;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+
+            // .span_flex {
+            //   display: flex;
+            //   width: 40%;
+            //   align-items: center;
+            //   @media screen and (min-width: 992px) {
+            //     max-width: 30%;
+            //   }
+            //   @media screen and (min-width: 2500px) {
+            //     max-width: 20%;
+            //   }
+            //   img {
+            //     position: relative;
+            //     inset-block: -0.3rem 0;
+            //     width: 50%;
+            //     aspect-ratio: 1/1;
+            //     @media screen and (min-width: 576px) {
+            //       inset: -0.8rem 0;
+            //     }
+            //     @media screen and (min-width: 1200px) {
+            //       inset: -1rem 0;
+            //       // border: 1px solid red;
+            //     }
+            //   }
+            // }
           }
+
           &.middle_text {
             @media screen and (min-width: 576px) {
               display: flex;
@@ -393,8 +428,11 @@ body {
           }
 
           @media screen and (min-width: 992px) {
-            font-size: 2rem;
+            font-size: 1.5rem;
             justify-content: flex-start;
+          }
+          @media screen and (min-width: 993px) {
+            font-size: 2rem;
           }
           @media screen and (min-width: 1200px) {
             font-size: 2.5rem;
@@ -591,7 +629,7 @@ body {
     @media screen and (min-width: 400px) {
       font-size: 3rem;
     }
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 1024px) {
       font-size: 3.5rem;
     }
 
@@ -822,6 +860,9 @@ body {
 /*
             @media screen and (min-width: 1800px) {
 
+
+            }
+              @media screen and (min-width: 1800px) {
             }
             @media screen and (min-width: 1400px) {
 
