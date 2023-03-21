@@ -766,7 +766,10 @@ body {
     align-items: center;
     font-size: 4rem;
   }
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 400px) and (max-width: 992px) {
+    padding: 0 5%;
+  }
+  @media screen and (min-width: 992px) {
     padding: 0 15%;
   }
 }
@@ -776,7 +779,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-
+  position: relative;
   &.space {
     justify-content: space-evenly;
   }
@@ -792,17 +795,17 @@ body {
   }
 
   & > div {
-    border: 2px solid $primary;
-    padding: 0.5rem 1rem;
+    border-image: linear-gradient(rgba(112, 255, 0, 0.55), #ffffff) 30;
+    border-style: solid;
+    height: 3.8rem;
     cursor: pointer;
-    width: 40%;
+    width: 45%;
+    font-size: 1.2rem;
 
     &:hover {
-      border: 2px solid $white;
       color: $primary;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       font-weight: 700;
-      transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
   }
 }
@@ -815,7 +818,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    @media screen and (min-width: 992px) {
+      gap: 2rem;
+    }
 
     li {
       display: flex;

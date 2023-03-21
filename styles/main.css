@@ -751,7 +751,12 @@ body .projects_stack > ul li {
   align-items: center;
   font-size: 4rem;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 400px) and (max-width: 992px) {
+  .footer_container {
+    padding: 0 5%;
+  }
+}
+@media screen and (min-width: 992px) {
   .footer_container {
     padding: 0 15%;
   }
@@ -762,6 +767,7 @@ body .projects_stack > ul li {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  position: relative;
 }
 .action_btns.space {
   justify-content: space-evenly;
@@ -775,17 +781,18 @@ body .projects_stack > ul li {
   font-weight: 600;
 }
 .action_btns > div {
-  border: 2px solid #70ff00;
-  padding: 0.5rem 1rem;
+  -o-border-image: linear-gradient(rgba(112, 255, 0, 0.55), #ffffff) 30;
+     border-image: linear-gradient(rgba(112, 255, 0, 0.55), #ffffff) 30;
+  border-style: solid;
+  height: 3.8rem;
   cursor: pointer;
-  width: 40%;
+  width: 45%;
+  font-size: 1.2rem;
 }
 .action_btns > div:hover {
-  border: 2px solid #fff;
   color: #70ff00;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .footer_items {
@@ -797,7 +804,12 @@ body .projects_stack > ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .footer_items ul {
+    gap: 2rem;
+  }
 }
 .footer_items ul li {
   display: flex;
