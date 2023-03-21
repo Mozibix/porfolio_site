@@ -365,6 +365,14 @@ body {
         }
 
         & > span {
+          & > img {
+            position: relative;
+            inset: 1rem 0;
+            width: 8%;
+            @media screen and (min-width: 992px) {
+              width: 12%;
+            }
+          }
           &.middle_text {
             @media screen and (min-width: 576px) {
               display: flex;
@@ -377,6 +385,7 @@ body {
           }
         }
         &.right_text {
+          font-size: 1.3rem;
           @media screen and (min-width: 576px) {
             display: flex;
             justify-content: flex-end;
@@ -793,6 +802,12 @@ body {
     font-size: 4rem;
   }
 }
+
+.font_prime {
+  font-family: "Courier Prime";
+  font-style: normal;
+}
+
 /* media screens */
 
 /*

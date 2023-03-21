@@ -349,6 +349,16 @@ body .hero_top_left p {
     line-height: 5.5rem;
   }
 }
+body .hero_top_left p > span > img {
+  position: relative;
+  inset: 1rem 0;
+  width: 8%;
+}
+@media screen and (min-width: 992px) {
+  body .hero_top_left p > span > img {
+    width: 12%;
+  }
+}
 @media screen and (min-width: 576px) {
   body .hero_top_left p > span.middle_text {
     display: flex;
@@ -360,6 +370,9 @@ body .hero_top_left p {
     display: grid;
     justify-content: flex-start;
   }
+}
+body .hero_top_left p.right_text {
+  font-size: 1.3rem;
 }
 @media screen and (min-width: 576px) {
   body .hero_top_left p.right_text {
@@ -790,6 +803,11 @@ body .projects_stack > ul li {
   .fa-quote-left {
     font-size: 4rem;
   }
+}
+
+.font_prime {
+  font-family: "Courier Prime";
+  font-style: normal;
 }
 
 /* media screens */
