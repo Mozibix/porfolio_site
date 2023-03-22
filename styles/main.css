@@ -948,6 +948,7 @@ body .projects_stack > ul li {
   content: "";
   position: absolute;
   width: 20rem;
+  overflow: hidden;
   aspect-ratio: 1/1;
   background-image: conic-gradient(transparent, transparent, transparent, rgba(112, 255, 0, 0.55));
   animation: animate 1s linear infinite;
@@ -959,6 +960,7 @@ body .projects_stack > ul li {
   position: absolute;
   width: 20rem;
   aspect-ratio: 1/1;
+  overflow: hidden;
   background-image: conic-gradient(transparent, transparent, transparent, #fff);
   animation: animate 1s linear infinite;
   animation-timing-function: cubic-bezier(0.3, 0.3, 0.3, 0.3);

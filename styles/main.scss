@@ -989,6 +989,7 @@ body {
       content: "";
       position: absolute;
       width: 20rem;
+      overflow: hidden;
       aspect-ratio: 1/1;
       background-image: conic-gradient(
         transparent,
@@ -1006,6 +1007,7 @@ body {
       position: absolute;
       width: 20rem;
       aspect-ratio: 1/1;
+      overflow: hidden;
       background-image: conic-gradient(
         transparent,
         transparent,
