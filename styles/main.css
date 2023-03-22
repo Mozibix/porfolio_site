@@ -797,8 +797,9 @@ body .projects_stack > ul li {
 
 .footer_items {
   margin-bottom: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.5rem;
+  position: relative;
 }
 .footer_items ul {
   display: flex;
@@ -817,8 +818,14 @@ body .projects_stack > ul li {
   justify-content: center;
   cursor: pointer;
 }
+.footer_items ul li > img {
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+}
 .footer_items ul li:hover {
   color: #70ff00;
+  font-weight: 700;
+  font-size: 1.6rem;
   /* add animation on hover  */
 }
 .footer_items ul li > span {
@@ -975,77 +982,6 @@ body .projects_stack > ul li {
   gap: 0.5rem;
 }
 
-/* 
-
-background: linear-gradient(180deg, rgba(112, 255, 0, 0.55) 0%, #FFFFFF 100%);
-*/
-/* 
-
-
-.box {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  background-color: rgba(0, 0, 0, 0.75);
-  border-radius: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.box::after {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background-image: conic-gradient(
-    transparent,
-    transparent,
-    transparent,
-    #d400d4
-  );
-  animation: animate 1.5s linear infinite;
-  animation-delay: -0.8s;
-}
-.box::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background-image: conic-gradient(
-    transparent,
-    transparent,
-    transparent,
-    #00ccff
-  );
-  animation: animate 1.5s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.box span {
-  position: absolute;
-  inset: 5px;
-  border-radius: 1px;
-  background: #0c1022;
-  z-index: 1;
-}
-
-.box h2 {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  font-size: 10em;
-}
-*/
 /* media screens */
 /*
             @media screen and (min-width: 1800px) {
