@@ -19,6 +19,10 @@ body ul {
   list-style: none;
   outline: none;
 }
+body a {
+  text-decoration: none;
+  color: inherit;
+}
 body .light_main_bg {
   background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
 }
