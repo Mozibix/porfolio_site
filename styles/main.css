@@ -950,8 +950,8 @@ body .projects_stack > ul li {
   width: 20rem;
   aspect-ratio: 1/1;
   background-image: conic-gradient(transparent, transparent, transparent, rgba(112, 255, 0, 0.55));
-  animation: animate 0.6s linear infinite;
-  animation-delay: -0.3s;
+  animation: animate 1s linear infinite;
+  animation-delay: -0.5s;
   animation-timing-function: cubic-bezier(0.3, 0.3, 0.3, 0.3);
 }
 .dropdown_contact_me::before {
@@ -960,7 +960,7 @@ body .projects_stack > ul li {
   width: 20rem;
   aspect-ratio: 1/1;
   background-image: conic-gradient(transparent, transparent, transparent, #fff);
-  animation: animate 0.6s linear infinite;
+  animation: animate 1s linear infinite;
   animation-timing-function: cubic-bezier(0.3, 0.3, 0.3, 0.3);
 }
 @keyframes animate {
@@ -973,7 +973,7 @@ body .projects_stack > ul li {
 }
 .dropdown_blank {
   position: absolute;
-  inset: 3.5px;
+  inset: 6px;
   border-radius: inherit;
   background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
   z-index: 1;
