@@ -36,10 +36,7 @@ document.onscroll = (e) => {
 /* TYPEWRITER FUNCTION */
 const textArray = ["eloper", ".{React.Js}", ".{Next.Js}"];
 
-// You can also do this by transfering it through a data-attribute
-// var textArray = typeWriterElement.getAttribute('data-array');
-
-// function to generate the backspace effect
+/* function to generate the backspace effect */
 const delWriter = (text, i, cb) => {
   if (i >= 0) {
     typeWriterElement.innerHTML = text.substring(0, i--);
@@ -53,7 +50,7 @@ const delWriter = (text, i, cb) => {
   }
 };
 
-// function to generate the keyhitting effect
+/* function to generate the keyhitting effect */
 const typeWriter = (text, i, cb) => {
   if (i < text.length + 1) {
     typeWriterElement.innerHTML = text.substring(0, i++);
