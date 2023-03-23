@@ -564,6 +564,8 @@ body .projects_bottom {
   gap: 0.2rem;
   width: 100%;
   padding: 1rem;
+  height: 100%;
+  min-height: 19rem;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   body .projects_bottom {
@@ -726,9 +728,10 @@ body .projects_stack > ul li {
     padding: 0 18%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .projects_container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -741,6 +744,8 @@ body .projects_stack > ul li {
     display: grid;
     gap: 10rem;
     margin-top: 5rem;
+    width: 100%;
+    padding: 0;
   }
 }
 

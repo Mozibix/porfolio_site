@@ -573,6 +573,8 @@ body {
       gap: 0.2rem;
       width: 100%;
       padding: 1rem;
+      height: 100%;
+      min-height: 19rem;
       @media screen and (min-width: 768px) and (max-width: 992px) {
         padding: 0.5rem;
       }
@@ -720,8 +722,9 @@ body {
     @media screen and (min-width: 600px) {
       padding: 0 18%;
     }
-    @media screen and (min-width: 768px) {
-      display: flex;
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      display: grid;
+      grid-template-columns: auto auto auto;
       justify-content: center;
       align-items: center;
       gap: 1rem;
@@ -732,6 +735,8 @@ body {
       display: grid;
       gap: 10rem;
       margin-top: 5rem;
+      width: 100%;
+      padding: 0;
     }
   }
 }
