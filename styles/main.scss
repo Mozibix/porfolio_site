@@ -510,13 +510,7 @@ body {
       &_inner {
         border: 1px solid $primary;
         border-radius: 1rem;
-        background: linear-gradient(
-          130.36deg,
-          #000000 0%,
-          #272727 44.03%,
-          #494949 99.99%,
-          #727272 100%
-        );
+        background: $light_main_bg;
         width: 100%;
         @media screen and (min-width: 768px) and (max-width: 992px) {
           box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
@@ -1073,10 +1067,36 @@ body {
       background: $white;
     }
 
-    &.active_link::after {
-      content: " ";
-      background: red;
-      transform: translate(-50%, -50%);
+    &.active_link {
+      &::after {
+        content: " ";
+        background: $primary;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &::before {
+      content: attr(link-info);
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      padding: 0.2rem 0.5rem;
+      display: flex;
+      transform: translateY(-50%);
+      background: $light_main_bg;
+      color: $white;
+      font-family: "Courier Prime";
+      font-style: normal;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 1rem;
+      pointer-events: none;
+      box-shadow: $light_dark 0px 3px 3px 0px;
+      transition: all 1s ease;
+      opacity: 0;
+    }
+    &:hover::before {
+      opacity: 1;
+      transform: translate(0, -50%);
     }
   }
 }
