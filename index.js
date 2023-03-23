@@ -2,6 +2,7 @@ const toogleBtn = document.querySelector(".toogle_btn");
 const toogleBtnIcon = document.querySelector(".toogle_btn i");
 const menu = document.querySelector(".dropdown_menu");
 const typeWriterElement = document.querySelector("#typewriter");
+const projectContainer = document.querySelector(".projects_container");
 
 toogleBtn.onclick = () => {
   menu.classList.toggle("open");
@@ -84,3 +85,153 @@ const StartWriter = (i) => {
 setTimeout(() => {
   StartWriter(0);
 }, 1000);
+
+/* -------------------------------------PROJECT DETAILS------------------------------------- */
+
+const projectsInfo = [
+  {
+    id: 1,
+    img_src: "./images/project-pics.png",
+    header: "header",
+    quotes:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus",
+    stacks: [
+      {
+        id: 1,
+        lang: "react",
+      },
+      {
+        id: 2,
+        lang: "tailwindcss",
+      },
+      {
+        id: 3,
+        lang: "sass",
+      },
+      {
+        id: 4,
+        lang: "bootstrap",
+      },
+    ],
+    codes_link: "#nav_sec",
+    live_link: "#nav_sec",
+  },
+  /*  */
+  {
+    id: 2,
+    img_src: "./images/project-pics.png",
+    header: "header",
+    quotes:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus,",
+    stacks: [
+      {
+        id: 1,
+        lang: "react",
+      },
+      {
+        id: 2,
+        lang: "bootstrap",
+      },
+    ],
+    codes_link: "#nav_sec",
+    live_link: "#nav_sec",
+  },
+  /*  */
+  {
+    id: 3,
+    img_src: "./images/project-pics.png",
+    header: "header",
+    quotes:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus,",
+    stacks: [
+      {
+        id: 1,
+        lang: "react",
+      },
+      {
+        id: 2,
+        lang: "tailwindcss",
+      },
+      {
+        id: 3,
+        lang: "sass",
+      },
+    ],
+    codes_link: "#nav_sec",
+    live_link: "#nav_sec",
+  },
+  /*  */
+  {
+    id: 4,
+    img_src: "./images/project-pics.png",
+    header: "header",
+    quotes:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus,",
+    stacks: [
+      {
+        id: 1,
+        lang: "react",
+      },
+      {
+        id: 2,
+        lang: "tailwindcss",
+      },
+      {
+        id: 3,
+        lang: "sass",
+      },
+      {
+        id: 4,
+        lang: "bootstrap",
+      },
+    ],
+    codes_link: "#nav_sec",
+    live_link: "#nav_sec",
+  },
+  /*  */
+];
+
+const projectSec = projectsInfo.map((projects, key) => {
+  return `
+     <div class="projects_display" key=${key}>
+            <div class="projects_display_inner">
+              <div class="projects_top dark_preview_bg">
+                <div class="projects_preview">
+                  <img src="${projects.img_src}" alt="project-view" />
+                </div>
+              </div>
+
+              <div class="projects_bottom">
+                <h4 class="box_header center">header</h4>
+                <div class="projects_quote small_text projects">
+               ${projects.quotes}
+                </div>
+                <div class="projects_stack box_header small_header">
+                  <ul>
+                    <li>${projects.stacks
+                      .map((stack) => stack.lang)
+                      .join(",")}</li>
+                  </ul>
+                </div>
+                <div class="projects_btn action_btns space">
+                  <div class="git_btn">
+                    <a class="action_btns" href=${projects.codes_link}>
+                      <img src="./images/github_logo.png" alt="github-icon" />
+                      <span class="small_text projects">code</span>
+                    </a>
+                  </div>
+
+                  <div class="live_btn">
+                    <a class="action_btns" href=${projects.live_link}>
+                      <img src="./svgs/external-link.svg" alt="livesite-icon" />
+                      <span class="small_text projects">demo</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+    `;
+});
+
+projectContainer.innerHTML = projectSec.join(" ");
