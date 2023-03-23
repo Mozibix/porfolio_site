@@ -7,6 +7,8 @@
   font-family: "Cabin", sans-serif;
 }
 
+/* 
+issues: projects-section not responsive -------------------------------------------*/
 body {
   background: #000;
   color: white;
@@ -503,32 +505,32 @@ body .projects_display {
     overflow: visible;
   }
 }
-body .projects_display_inner {
+body .projects_display .inverse, body .projects_display_inner {
   border: 1px solid #70ff00;
   border-radius: 1rem;
   background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
   width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  body .projects_display_inner {
+  body .projects_display .inverse, body .projects_display_inner {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
     cursor: pointer;
   }
-  body .projects_display_inner:hover {
+  body .projects_display .inverse:hover, body .projects_display_inner:hover {
     box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
   }
 }
 @media screen and (min-width: 992px) {
-  body .projects_display_inner {
+  body .projects_display .inverse, body .projects_display_inner {
     all: unset;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
   }
-  body .projects_display_inner.inverse {
-    flex-direction: row-reverse;
-  }
+}
+body .projects_display .inverse {
+  flex-direction: row-reverse !important;
 }
 body .projects_top {
   border: 1px solid #70ff00;
@@ -772,6 +774,7 @@ body .projects_stack > ul li {
   align-items: center;
   gap: 0.5rem;
   position: relative;
+  height: 100%;
 }
 .action_btns.space {
   justify-content: space-evenly;
@@ -813,7 +816,12 @@ body .projects_stack > ul li {
 }
 @media screen and (min-width: 992px) {
   .footer_items ul {
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer_items ul {
+    gap: 2.5rem;
   }
 }
 .footer_items ul li {
@@ -822,7 +830,14 @@ body .projects_stack > ul li {
   justify-content: center;
   cursor: pointer;
 }
+@media screen and (min-width: 1200px) {
+  .footer_items ul li {
+    gap: 0.5rem;
+  }
+}
 .footer_items ul li > img {
+  position: relative;
+  inset: -0.5rem 0;
   width: 2.5rem;
   aspect-ratio: 1/1;
 }

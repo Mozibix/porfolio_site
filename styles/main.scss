@@ -9,6 +9,8 @@
   font-family: "Cabin", sans-serif;
 }
 
+/* 
+issues: projects-section not responsive -------------------------------------------*/
 body {
   background: $black;
   color: white;
@@ -383,31 +385,6 @@ body {
             border: 1px solid red;
             display: flex;
             align-items: center;
-
-            // .span_flex {
-            //   display: flex;
-            //   width: 40%;
-            //   align-items: center;
-            //   @media screen and (min-width: 992px) {
-            //     max-width: 30%;
-            //   }
-            //   @media screen and (min-width: 2500px) {
-            //     max-width: 20%;
-            //   }
-            //   img {
-            //     position: relative;
-            //     inset-block: -0.3rem 0;
-            //     width: 50%;
-            //     aspect-ratio: 1/1;
-            //     @media screen and (min-width: 576px) {
-            //       inset: -0.8rem 0;
-            //     }
-            //     @media screen and (min-width: 1200px) {
-            //       inset: -1rem 0;
-            //       // border: 1px solid red;
-            //     }
-            //   }
-            // }
           }
 
           &.middle_text {
@@ -528,6 +505,8 @@ body {
       @media screen and (min-width: 768px) and (max-width: 992px) {
         overflow: visible;
       }
+
+      .inverse,
       &_inner {
         border: 1px solid $primary;
         border-radius: 1rem;
@@ -552,10 +531,11 @@ body {
           justify-content: center;
           align-items: center;
           gap: 5rem;
-          &.inverse {
-            flex-direction: row-reverse;
-          }
         }
+      }
+
+      .inverse {
+        flex-direction: row-reverse !important;
       }
     }
     /* TOP PREVIEW */
@@ -783,6 +763,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   position: relative;
+  height: 100%;
   &.space {
     justify-content: space-evenly;
   }
@@ -824,7 +805,10 @@ body {
     align-items: center;
     gap: 1rem;
     @media screen and (min-width: 992px) {
-      gap: 2rem;
+      gap: 1.5rem;
+    }
+    @media screen and (min-width: 1200px) {
+      gap: 2.5rem;
     }
 
     li {
@@ -832,8 +816,13 @@ body {
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      @media screen and (min-width: 1200px) {
+        gap: 0.5rem;
+      }
 
       & > img {
+        position: relative;
+        inset: -0.5rem 0;
         width: 2.5rem;
         aspect-ratio: 1/1;
       }
