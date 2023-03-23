@@ -92,7 +92,7 @@ const projectsInfo = [
   {
     id: 1,
     img_src: "./images/project-pics.png",
-    header: "header",
+    header: "header1",
     quotes:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus",
     stacks: [
@@ -115,56 +115,13 @@ const projectsInfo = [
     ],
     codes_link: "#nav_sec",
     live_link: "#nav_sec",
+    class: "",
   },
   /*  */
   {
     id: 2,
     img_src: "./images/project-pics.png",
-    header: "header",
-    quotes:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus,",
-    stacks: [
-      {
-        id: 1,
-        lang: "react",
-      },
-      {
-        id: 2,
-        lang: "bootstrap",
-      },
-    ],
-    codes_link: "#nav_sec",
-    live_link: "#nav_sec",
-  },
-  /*  */
-  {
-    id: 3,
-    img_src: "./images/project-pics.png",
-    header: "header",
-    quotes:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus,",
-    stacks: [
-      {
-        id: 1,
-        lang: "react",
-      },
-      {
-        id: 2,
-        lang: "tailwindcss",
-      },
-      {
-        id: 3,
-        lang: "sass",
-      },
-    ],
-    codes_link: "#nav_sec",
-    live_link: "#nav_sec",
-  },
-  /*  */
-  {
-    id: 4,
-    img_src: "./images/project-pics.png",
-    header: "header",
+    header: "header2",
     quotes:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus,",
     stacks: [
@@ -187,50 +144,116 @@ const projectsInfo = [
     ],
     codes_link: "#nav_sec",
     live_link: "#nav_sec",
+    class: "inverse",
+  },
+  /*  */
+  {
+    id: 3,
+    img_src: "./images/project-pics.png",
+    header: "header3",
+    quotes:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus,",
+    stacks: [
+      {
+        id: 1,
+        lang: "react",
+      },
+      {
+        id: 2,
+        lang: "tailwindcss",
+      },
+      {
+        id: 3,
+        lang: "sass",
+      },
+    ],
+    codes_link: "#nav_sec",
+    live_link: "#nav_sec",
+    class: "",
+  },
+  /*  */
+  {
+    id: 4,
+    img_src: "./images/project-pics.png",
+    header: "header4",
+    quotes:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus,",
+    stacks: [
+      {
+        id: 1,
+        lang: "react",
+      },
+      {
+        id: 2,
+        lang: "tailwindcss",
+      },
+      {
+        id: 3,
+        lang: "sass",
+      },
+      {
+        id: 4,
+        lang: "bootstrap",
+      },
+    ],
+    codes_link: "#nav_sec",
+    live_link: "#nav_sec",
+    // class: "inverse",
+    class: "inverse",
   },
   /*  */
 ];
 
 const projectSec = projectsInfo.map((projects, key) => {
+  const { stacks } = projects;
+  const classes = `${projects.class.toString()}  projects_display_inner`;
+
   return `
-     <div class="projects_display" key=${key}>
-            <div class="projects_display_inner">
-              <div class="projects_top dark_preview_bg">
-                <div class="projects_preview">
-                  <img src="${projects.img_src}" alt="project-view" />
-                </div>
-              </div>
+    <div class="projects_display" key=${key}>
+      <div class=${classes}>
+        <div class="projects_top dark_preview_bg">
+          <div class="projects_preview">
+            <img src=${projects.img_src} alt="project-view" />
+          </div>
+        </div>
 
-              <div class="projects_bottom">
-                <h4 class="box_header center">header</h4>
-                <div class="projects_quote small_text projects">
-               ${projects.quotes}
-                </div>
-                <div class="projects_stack box_header small_header">
-                  <ul>
-                    <li>${projects.stacks
-                      .map((stack) => stack.lang)
-                      .join(",")}</li>
-                  </ul>
-                </div>
-                <div class="projects_btn action_btns space">
-                  <div class="git_btn">
-                    <a class="action_btns" href=${projects.codes_link}>
-                      <img src="./images/github_logo.png" alt="github-icon" />
-                      <span class="small_text projects">code</span>
-                    </a>
-                  </div>
-
-                  <div class="live_btn">
-                    <a class="action_btns" href=${projects.live_link}>
-                      <img src="./svgs/external-link.svg" alt="livesite-icon" />
-                      <span class="small_text projects">demo</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+        <div class="projects_bottom">
+          <h4 class="box_header center">
+          ${projects.header}
+          </h4>
+          <div class="projects_quote small_text projects">
+              ${projects.quotes}      
+           </div>
+          <div class="projects_stack box_header small_header ">
+          <ul> 
+          ${stacks
+            .map(({ lang }, id) => {
+              return `
+            <li key=${id}>${lang}</li>
+            `;
+            })
+            .join(" ")}
+          </ul>
+          
+          </div>
+          <div class="projects_btn action_btns space">
+            <div class="git_btn">
+              <a class="action_btns" href="#nav_sec">
+                <img src="./images/github_logo.png" alt="github-icon" />
+                <span class="small_text projects">code</span>
+              </a>
             </div>
-          </div> 
+
+            <div class="live_btn">
+              <a class="action_btns" href="#nav_sec">
+                <img src="./svgs/external-link.svg" alt="livesite-icon" />
+                <span class="small_text projects">demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     `;
 });
 
