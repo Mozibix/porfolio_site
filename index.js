@@ -3,7 +3,39 @@ const toogleBtnIcon = document.querySelector(".toogle_btn i");
 const menu = document.querySelector(".dropdown_menu");
 const typeWriterElement = document.querySelector("#typewriter");
 const projectContainer = document.querySelector(".projects_container");
+const sections = document.querySelectorAll("section");
+const dots = document.querySelectorAll(".scroll_indicator a");
 
+/* -----------------------SIDE-BAR FUNCTIONS----------------------- */
+
+const removeActive = () => {
+  dots.forEach((dot) => {
+    dot.classList.remove("active_link");
+  });
+};
+
+const addActiveClass = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      let currentDot = document.querySelector(
+        `.scroll_indicator a[href="#${entry.target.id}"]`
+      );
+      removeActive();
+      currentDot.classList.add("active_link");
+    }
+  });
+};
+
+const options = {
+  threshold: 1,
+};
+const observer = new IntersectionObserver(addActiveClass, options);
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+/* --------------------------------HAMBURGER TOGGLE-------------------------------- */
 toogleBtn.onclick = () => {
   menu.classList.toggle("open");
 
