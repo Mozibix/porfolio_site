@@ -6,6 +6,8 @@ const projectContainer = document.querySelector(".projects_container");
 const sections = document.querySelectorAll("section");
 const dots = document.querySelectorAll(".scroll_indicator a");
 
+/* ------------------------HIDE THE SIDE BAR AT A CERTAIN HEIGHT -------------*/
+
 /* -----------------------SIDE-BAR FUNCTIONS----------------------- */
 
 const removeActive = () => {
