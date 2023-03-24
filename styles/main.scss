@@ -334,7 +334,7 @@ body {
                 line-height: 2rem;
                 cursor: pointer;
                 color: $primary;
-
+                text-decoration: underline;
                 @media screen and (min-width: 1200px) {
                   font-size: 1.6rem;
                 }
@@ -380,13 +380,6 @@ body {
         }
 
         & > span {
-          &.span_container {
-            width: 100%;
-            border: 1px solid red;
-            display: flex;
-            align-items: center;
-          }
-
           &.middle_text {
             @media screen and (min-width: 576px) {
               display: flex;
@@ -706,6 +699,9 @@ body {
 }
 
 .projects {
+  &_sec {
+    position: relative;
+  }
   &_container {
     display: grid;
     gap: 2rem;
@@ -727,8 +723,7 @@ body {
     }
     @media screen and (min-width: 992px) {
       display: grid;
-      gap: 10rem;
-      margin-top: 5rem;
+      gap: 2rem;
       width: 100%;
       padding: 0;
     }
@@ -859,8 +854,6 @@ body {
 }
 
 .contact_me {
-  // border-image: linear-gradient(rgba(112, 255, 0, 0.55), #ffffff) 30;
-  // border-style: solid;
   @media screen and (min-width: 1200px) {
     background: linear-gradient(
       130.36deg,
@@ -1041,29 +1034,44 @@ body {
 
 /* SCROLL INDICATION */
 .scroll_indicator {
+  display: none;
   position: fixed;
-  right: 50px;
+  right: 5px;
+  background: $light_main_bg;
   top: 50%;
+  border-radius: 4rem;
   transform: translateY(-50%);
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   z-index: 100;
+  padding: 1rem 0.2rem;
 
+  @media screen and (min-width: 992px) {
+    display: flex;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0.3rem;
+    top: 2rem;
+    right: 10px;
+    background: $white;
+    height: 9rem;
+  }
   a {
-    position: relative !important;
+    position: relative;
     padding: 10px;
     &::after {
       content: " ";
       position: absolute;
       width: 0.8rem;
       aspect-ratio: 1/1;
-      border-radius: 50%;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 20%;
+      transform: rotate(-45deg);
       background: $white;
     }
 
@@ -1071,14 +1079,14 @@ body {
       &::after {
         content: " ";
         background: $primary;
-        transform: translate(-50%, -50%);
+        transform: rotate(-45deg);
       }
     }
     &::before {
       content: attr(link-info);
       position: absolute;
-      right: 24px;
-      top: 50%;
+      right: 1.5rem;
+      top: 70%;
       padding: 0.2rem 0.5rem;
       display: flex;
       transform: translateY(-50%);
@@ -1086,9 +1094,9 @@ body {
       color: $white;
       font-family: "Courier Prime";
       font-style: normal;
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
-      font-size: 1rem;
+      font-size: 1.2rem;
       pointer-events: none;
       box-shadow: $light_dark 0px 3px 3px 0px;
       transition: all 1s ease;
@@ -1099,6 +1107,14 @@ body {
       transform: translate(0, -50%);
     }
   }
+}
+
+#projects_id {
+  position: absolute;
+  @media screen and (min-width: 992px) {
+    width: 55rem;
+  }
+  aspect-ratio: 1/1;
 }
 /* media screens */
 

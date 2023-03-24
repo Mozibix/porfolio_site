@@ -323,6 +323,7 @@ body .hero_inner .hero_bottom_right .bottom_box .link_text {
   line-height: 2rem;
   cursor: pointer;
   color: #70ff00;
+  text-decoration: underline;
 }
 @media screen and (min-width: 1200px) {
   body .hero_inner .hero_bottom_right .bottom_box .link_text {
@@ -367,12 +368,6 @@ body .hero_top_left p > img {
     font-size: 4rem;
     line-height: 5.5rem;
   }
-}
-body .hero_top_left p > span.span_container {
-  width: 100%;
-  border: 1px solid red;
-  display: flex;
-  align-items: center;
 }
 @media screen and (min-width: 576px) {
   body .hero_top_left p > span.middle_text {
@@ -715,6 +710,9 @@ body .projects_stack > ul li {
   }
 }
 
+.projects_sec {
+  position: relative;
+}
 .projects_container {
   display: grid;
   gap: 2rem;
@@ -744,8 +742,7 @@ body .projects_stack > ul li {
 @media screen and (min-width: 992px) {
   .projects_container {
     display: grid;
-    gap: 10rem;
-    margin-top: 5rem;
+    gap: 2rem;
     width: 100%;
     padding: 0;
   }
@@ -1012,19 +1009,36 @@ body .projects_stack > ul li {
 
 /* SCROLL INDICATION */
 .scroll_indicator {
+  display: none;
   position: fixed;
-  right: 50px;
+  right: 5px;
+  background: linear-gradient(130.36deg, #000000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
   top: 50%;
+  border-radius: 4rem;
   transform: translateY(-50%);
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   z-index: 100;
+  padding: 1rem 0.2rem;
+}
+@media screen and (min-width: 992px) {
+  .scroll_indicator {
+    display: flex;
+  }
+}
+.scroll_indicator::before {
+  content: "";
+  position: absolute;
+  width: 0.3rem;
+  top: 2rem;
+  right: 10px;
+  background: #fff;
+  height: 9rem;
 }
 .scroll_indicator a {
-  position: relative !important;
+  position: relative;
   padding: 10px;
 }
 .scroll_indicator a::after {
@@ -1032,22 +1046,21 @@ body .projects_stack > ul li {
   position: absolute;
   width: 0.8rem;
   aspect-ratio: 1/1;
-  border-radius: 50%;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 20%;
+  transform: rotate(-45deg);
   background: #fff;
 }
 .scroll_indicator a.active_link::after {
   content: " ";
   background: #70ff00;
-  transform: translate(-50%, -50%);
+  transform: rotate(-45deg);
 }
 .scroll_indicator a::before {
   content: attr(link-info);
   position: absolute;
-  right: 24px;
-  top: 50%;
+  right: 1.5rem;
+  top: 70%;
   padding: 0.2rem 0.5rem;
   display: flex;
   transform: translateY(-50%);
@@ -1055,9 +1068,9 @@ body .projects_stack > ul li {
   color: #fff;
   font-family: "Courier Prime";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.2rem;
   pointer-events: none;
   box-shadow: #828282 0px 3px 3px 0px;
   transition: all 1s ease;
@@ -1066,6 +1079,16 @@ body .projects_stack > ul li {
 .scroll_indicator a:hover::before {
   opacity: 1;
   transform: translate(0, -50%);
+}
+
+#projects_id {
+  position: absolute;
+  aspect-ratio: 1/1;
+}
+@media screen and (min-width: 992px) {
+  #projects_id {
+    width: 55rem;
+  }
 }
 
 /* media screens */
