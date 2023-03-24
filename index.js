@@ -14,10 +14,10 @@ const removeActive = () => {
   });
 };
 
-const addActiveClass = (entries, observer) => {
+const addActiveClass = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      let currentDot = document.querySelector(
+      const currentDot = document.querySelector(
         `.scroll_indicator a[href="#${entry.target.id}"]`
       );
       removeActive();
