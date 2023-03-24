@@ -23,17 +23,19 @@
       <a href="#about_id" link-info="about"> </a>
       <a href="#skills_id" link-info="skills"> </a>
       <a href="#projects_id" link-info="projects"> </a>
-      <a href="#footer_id" link-info="say&nbsp;hi"> </a>
+      <a href="#footer_id" class="transform" link-info="say&nbsp;hi"> </a>
     </div>
     <div class="light_main_bg">
       <!-- NAVBAR -->
 
       <header id="nav_sec">
-        <div class="navbar" id="">
+        <div class="navbar">
           <div class="navbar_inner">
-            <div class="logo">
-              <p><span>opuz</span>moses</p>
-            </div>
+            <a href="#">
+              <div class="logo">
+                <p><span>opuz</span>moses</p>
+              </div>
+            </a>
 
             <div class="menu_items">
               <ul>
@@ -90,24 +92,44 @@
 
         <div class="dropdown_menu">
           <ul>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>
-              <img src="./svgs/linkedin.svg" alt="linkedin" />
-              <span> Linkedin </span>
-            </li>
-            <li>
-              <img src="./svgs/github.svg" alt="github" />
-              <span> Github </span>
-            </li>
-            <li class="dropdown_contact_me">
-              <span class="dropdown_blank"></span>
-              <span class="dropdown_index">
-                <img src="./svgs/email.svg" alt="email" />
-                <span> Contact me </span>
-              </span>
-            </li>
+            <a href="#about_id">
+              <li>About</li>
+            </a>
+
+            <a href="#skills_id">
+              <li>Skills</li>
+            </a>
+
+            <a href="#projects_id">
+              <li>Projects</li>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/moses-opusunju/"
+              target="_blank"
+            >
+              <li>
+                <img src="./svgs/linkedin.svg" alt="linkedin" />
+                <span> Linkedin </span>
+              </li>
+            </a>
+
+            <a href="https://github.com/Mozibix" target="_blank">
+              <li>
+                <img src="./svgs/github.svg" alt="github" />
+                <span> Github </span>
+              </li>
+            </a>
+
+            <a href="mailto:opuzmoses@gmail.com" target="_blank">
+              <li class="dropdown_contact_me">
+                <span class="dropdown_blank"></span>
+                <span class="dropdown_index">
+                  <img src="./svgs/email.svg" alt="email" />
+                  <span> Contact me </span>
+                </span>
+              </li>
+            </a>
           </ul>
         </div>
       </header>
@@ -166,7 +188,7 @@
                 <div class="bottom_box_inner">
                   <div class="left_box">
                     <h3 class="box_header">Frontend Developer</h3>
-                    <a href="#!" class="link_text">Projects</a>
+                    <a href="#projects_id" class="link_text">Projects</a>
                   </div>
 
                   <div class="right_box">
@@ -178,7 +200,7 @@
                 <div class="bottom_box_inner">
                   <div class="left_box">
                     <h3 class="box_header">Freelancer</h3>
-                    <a href="#!" class="link_text">Hire me!</a>
+                    <a href="#footer_id" class="link_text">Hire me!</a>
                   </div>
 
                   <div class="right_box">
@@ -217,8 +239,8 @@
 
     <!-- ------------------------PROJECTS SECTION------------------------ -->
     <div class="projects_sec light_main_bg">
+      <section id="projects_id"></section>
       <div class="projects_sec_inner container_main">
-        <section id="projects_id"></section>
         <h3 class="primary_text header_text">projects<span>( )</span></h3>
 
         <!-- ALL PROJECTS SECTION -->
