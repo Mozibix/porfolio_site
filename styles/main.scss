@@ -880,7 +880,6 @@ body {
       content: "";
     }
     position: absolute;
-    width: 20rem;
     aspect-ratio: 1/1;
     background-image: conic-gradient(
       transparent,
@@ -888,8 +887,8 @@ body {
       transparent,
       rgba(112, 255, 0, 0.55)
     );
-    animation: animate 1s linear infinite;
-    animation-delay: -0.5s;
+    animation: animate 0.5s linear infinite;
+    animation-delay: -0.3s;
     animation-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
   }
 
@@ -898,7 +897,6 @@ body {
       content: "";
     }
     position: absolute;
-    width: 20rem;
     aspect-ratio: 1/1;
     background-image: conic-gradient(
       transparent,
@@ -906,10 +904,14 @@ body {
       transparent,
       #fff
     );
-    animation: animate 1s linear infinite;
+    animation: animate 0.5s linear infinite;
     animation-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
   }
 
+  &:hover::after,
+  &:hover::before {
+    width: 20rem;
+  }
   @keyframes animate {
     0% {
       transform: rotate(0deg);
@@ -972,7 +974,6 @@ body {
     &::after {
       content: "";
       position: absolute;
-      width: 20rem;
       overflow: hidden;
       aspect-ratio: 1/1;
       background-image: conic-gradient(
@@ -981,15 +982,14 @@ body {
         transparent,
         rgba(112, 255, 0, 0.55)
       );
-      animation: animate 1s linear infinite;
-      animation-delay: -0.5s;
+      animation: animate 0.5s linear infinite;
+      animation-delay: -0.3s;
       animation-timing-function: cubic-bezier(0.3, 0.3, 0.3, 0.3);
     }
 
     &::before {
       content: "";
       position: absolute;
-      width: 20rem;
       aspect-ratio: 1/1;
       overflow: hidden;
       background-image: conic-gradient(
@@ -998,10 +998,14 @@ body {
         transparent,
         #fff
       );
-      animation: animate 1s linear infinite;
+      animation: animate 0.5s linear infinite;
       animation-timing-function: cubic-bezier(0.3, 0.3, 0.3, 0.3);
     }
 
+    &:hover::after,
+    &:hover::before {
+      width: 20rem;
+    }
     @keyframes animate {
       0% {
         transform: rotate(0deg);
@@ -1014,7 +1018,7 @@ body {
 
   &_blank {
     position: absolute;
-    inset: 6px;
+    inset: 3px;
     border-radius: inherit;
     background: linear-gradient(
       130.36deg,
