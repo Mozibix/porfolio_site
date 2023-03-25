@@ -4,9 +4,13 @@ const menu = document.querySelector(".dropdown_menu");
 const typeWriterElement = document.querySelector("#typewriter");
 const projectContainer = document.querySelector(".projects_container");
 const sections = document.querySelectorAll("section");
+const scrollIndicator = document.querySelector(".scroll_indicator");
 const dots = document.querySelectorAll(".scroll_indicator a");
 
 /* ------------------------HIDE THE SIDE BAR AT A CERTAIN HEIGHT -------------*/
+window.addEventListener("scroll", () => {
+  scrollIndicator.classList.toggle("visible", window.scrollY > 80);
+});
 
 /* -----------------------SIDE-BAR FUNCTIONS----------------------- */
 
