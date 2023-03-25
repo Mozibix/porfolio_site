@@ -331,6 +331,9 @@ body .hero_inner .hero_bottom_right .bottom_box .link_text {
     font-size: 1.6rem;
   }
 }
+body .hero_inner .hero_bottom_right .bottom_box .link_text:hover {
+  font-weight: 600;
+}
 body .hero_top_left {
   width: 100%;
 }
@@ -850,7 +853,8 @@ body .projects_stack > ul li {
   color: #70ff00;
   font-weight: 700;
   font-size: 1.6rem;
-  /* add animation on hover  */
+  font-family: "Courier Prime";
+  font-style: normal;
 }
 .footer_items ul li > span {
   display: none;
@@ -878,6 +882,7 @@ body .projects_stack > ul li {
   font-style: normal;
 }
 
+/* DESKTOP SCREEN ANIMATION */
 .contact_me {
   position: relative;
   border-radius: 1rem;
@@ -885,6 +890,16 @@ body .projects_stack > ul li {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 1199px) {
+  .contact_me {
+    width: 8rem;
+  }
+  .contact_me:hover {
+    -o-border-image: linear-gradient(rgba(112, 255, 0, 0.55), #ffffff) 30;
+       border-image: linear-gradient(rgba(112, 255, 0, 0.55), #ffffff) 30;
+    border-style: solid;
+  }
 }
 @media screen and (min-width: 1200px) {
   .contact_me {
@@ -937,19 +952,17 @@ body .projects_stack > ul li {
   z-index: 1;
 }
 .contact_me .index {
+  font-family: "Courier Prime";
+  font-style: normal;
   z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  text-transform: uppercase;
 }
-.contact_me .index > span {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .contact_me .index > span {
-    display: block;
-  }
+.contact_me .index:hover {
+  font-weight: 700;
 }
 
 /* MOBILE SCREEN ANIMATION */
@@ -1005,9 +1018,15 @@ body .projects_stack > ul li {
 .dropdown_index {
   z-index: 5;
   display: flex;
+  text-transform: uppercase;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+.dropdown_index > span {
+  font-family: "Courier Prime";
+  font-style: normal;
+  font-weight: 700;
 }
 
 /* SCROLL INDICATION */
