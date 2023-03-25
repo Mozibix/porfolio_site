@@ -1050,9 +1050,14 @@ body {
   gap: 1rem;
   z-index: 100;
   padding: 1rem 0.2rem;
+  opacity: 0;
+  transition: all 5s ease;
 
   @media screen and (min-width: 992px) {
-    display: flex;
+    &.visible {
+      display: flex !important;
+      opacity: 1;
+    }
   }
 
   &::before {
@@ -1076,6 +1081,10 @@ body {
       left: 20%;
       transform: rotate(-45deg);
       background: $white;
+    }
+
+    &:hover::after {
+      background: $primary;
     }
 
     &.active_link {

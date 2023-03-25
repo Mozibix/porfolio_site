@@ -1023,10 +1023,13 @@ body .projects_stack > ul li {
   gap: 1rem;
   z-index: 100;
   padding: 1rem 0.2rem;
+  opacity: 0;
+  transition: all 5s ease;
 }
 @media screen and (min-width: 992px) {
-  .scroll_indicator {
-    display: flex;
+  .scroll_indicator.visible {
+    display: flex !important;
+    opacity: 1;
   }
 }
 .scroll_indicator::before {
@@ -1051,6 +1054,9 @@ body .projects_stack > ul li {
   left: 20%;
   transform: rotate(-45deg);
   background: #fff;
+}
+.scroll_indicator a:hover::after {
+  background: #70ff00;
 }
 .scroll_indicator a.active_link::after {
   content: " ";
