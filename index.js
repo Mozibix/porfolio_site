@@ -126,14 +126,14 @@ setTimeout(() => {
 const projectsInfo = [
   {
     id: 1,
-    img_src: "./images/project-pics.png",
-    header: "header1",
+    img_src: "./images/crownplan_project_pics.png",
+    header: "Crown Plan",
     quotes:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus",
+      "A well-designed and functional web-application that provides users with an effective tool for planning and tracking their tasks and goals. Its user-friendly interface and intuitive features make it a great choice for anyone looking to stay organized and productive.",
     stacks: [
       {
         id: 1,
-        lang: "react",
+        lang: "next.js",
       },
       {
         id: 2,
@@ -143,97 +143,34 @@ const projectsInfo = [
         id: 3,
         lang: "sass",
       },
-      {
-        id: 4,
-        lang: "bootstrap",
-      },
     ],
-    codes_link: "#nav_sec",
-    live_link: "#nav_sec",
+    codes_link: "https://github.com/Mozibix/crown-plan-project",
+    live_link: "https://crown-plan-project.vercel.app/",
     class: "",
   },
   /*  */
   {
     id: 2,
-    img_src: "./images/project-pics.png",
-    header: "header2",
+    img_src: "./images/darkchat_hero_pics.png",
+    header: "DarkChat-App",
     quotes:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus,",
+      "The Darkchat-App is a well-designed real-time chat application that uses modern web technologies to deliver a seamless user experience. It is a great example to understand how vanilla Javascript works with the DOM.",
     stacks: [
       {
         id: 1,
-        lang: "react",
+        lang: "HTML",
       },
       {
         id: 2,
-        lang: "tailwindcss",
+        lang: "SASS",
       },
       {
         id: 3,
-        lang: "sass",
-      },
-      {
-        id: 4,
-        lang: "bootstrap",
+        lang: "JAVASCRIPT",
       },
     ],
-    codes_link: "#nav_sec",
-    live_link: "#nav_sec",
-    class: "inverse",
-  },
-  /*  */
-  {
-    id: 3,
-    img_src: "./images/project-pics.png",
-    header: "header3",
-    quotes:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus,",
-    stacks: [
-      {
-        id: 1,
-        lang: "react",
-      },
-      {
-        id: 2,
-        lang: "tailwindcss",
-      },
-      {
-        id: 3,
-        lang: "sass",
-      },
-    ],
-    codes_link: "#nav_sec",
-    live_link: "#nav_sec",
-    class: "",
-  },
-  /*  */
-  {
-    id: 4,
-    img_src: "./images/project-pics.png",
-    header: "header4",
-    quotes:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaeipsa et in commodi perspiciatis suscipit totam vitae ab expedita, quia, illum enim velit aut autem, ratione corrupti! Doloribus,",
-    stacks: [
-      {
-        id: 1,
-        lang: "react",
-      },
-      {
-        id: 2,
-        lang: "tailwindcss",
-      },
-      {
-        id: 3,
-        lang: "sass",
-      },
-      {
-        id: 4,
-        lang: "bootstrap",
-      },
-    ],
-    codes_link: "#nav_sec",
-    live_link: "#nav_sec",
-    // class: "inverse",
+    codes_link: "https://github.com/Mozibix/social-web-application",
+    live_link: "https://dark-chat-app.vercel.app/",
     class: "inverse",
   },
   /*  */
@@ -273,14 +210,16 @@ const projectSec = projectsInfo.map((projects, key) => {
           </div>
           <div class="projects_btn action_btns space">
             <div class="git_btn">
-              <a class="action_btns" href="#nav_sec">
+              <a class="action_btns" href=${
+                projects.codes_link
+              } target="_blank">
                 <img src="./images/github_logo.png" alt="github-icon" />
                 <span class="small_text projects">code</span>
               </a>
             </div>
 
             <div class="live_btn">
-              <a class="action_btns" href="#nav_sec">
+              <a class="action_btns" href=${projects.live_link} target="_blank">
                 <img src="./svgs/external-link.svg" alt="livesite-icon" />
                 <span class="small_text projects">demo</span>
               </a>
