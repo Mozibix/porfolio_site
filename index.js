@@ -69,7 +69,30 @@ document.onscroll = (e) => {
   }
 };
 
-/*  */
+/* BACKGROUND PARTICLE */
+document.addEventListener("mousemove", function (e) {
+  const body = document.querySelector("body");
+  const particles = document.createElement("span");
+  particles.classList.add("particle");
+  const x = e.offsetX;
+  const y = e.offsetY;
+  particles.style.left = x + "px";
+  particles.style.top = y + "px";
+
+  const size = Math.random() * 8;
+  particles.style.width = 2 + size + "px";
+  particles.style.height = 2 + size + "px";
+  body.appendChild(particles);
+
+  const tranformValue = Math.random() * 360;
+  particles.style.transform = "rotate(" + tranformValue + "deg)";
+
+  body.style.overflowX = "hidden";
+
+  setTimeout(function () {
+    particles.remove();
+  }, 2000);
+});
 
 /* TYPEWRITER FUNCTION */
 const textArray = ["eloper", ".{React.Js}", ".{Next.Js}"];
