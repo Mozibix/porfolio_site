@@ -1,3 +1,16 @@
+/* PRE-LOADER FUNCTIONALITY*/
+document.addEventListener("DOMContentLoaded", () => {
+  const preloader = document.querySelector("#preloader_sec");
+  preloader.classList.remove("hidden");
+  preloader.classList.add("preloader");
+
+  void preloader.offsetWidth;
+
+  setTimeout(() => {
+    preloader.classList.add("hidden");
+  }, 1000);
+});
+
 const toogleBtn = document.querySelector(".toogle_btn");
 const toogleBtnIcon = document.querySelector(".toogle_btn i");
 const menu = document.querySelector(".dropdown_menu");
