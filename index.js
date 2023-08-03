@@ -206,20 +206,20 @@ const projectSec = projectsInfo.map((projects, key) => {
   return `
     <div class="projects_display" key=${key}>
       <div class=${classes}>
-        <div class="projects_top dark_preview_bg">
+        <div class="projects_top dark_preview_bg animations_left">
           <div class="projects_preview">
             <img src=${projects.img_src} alt="project-view" />
           </div>
         </div>
 
-        <div class="projects_bottom">
-          <h4 class="box_header center">
+        <div class="projects_bottom animations_left">
+          <h4 class="box_header center animations_up">
           ${projects.header}
           </h4>
-          <div class="projects_quote small_text projects">
+          <div class="projects_quote small_text projects animations_down">
               ${projects.quotes}      
            </div>
-          <div class="projects_stack box_header small_header ">
+          <div class="projects_stack box_header small_header animations_left ">
           <ul> 
           ${stacks
             .map(({ lang }, id) => {
@@ -232,7 +232,7 @@ const projectSec = projectsInfo.map((projects, key) => {
           
           </div>
           <div class="projects_btn action_btns space">
-            <div class="git_btn">
+            <div class="git_btn animations_left">
               <a class="action_btns" href=${
                 projects.codes_link
               } target="_blank">
@@ -241,7 +241,7 @@ const projectSec = projectsInfo.map((projects, key) => {
               </a>
             </div>
 
-            <div class="live_btn">
+            <div class="live_btn animations_down">
               <a class="action_btns" href=${projects.live_link} target="_blank">
                 <img src="./svgs/external-link.svg" alt="livesite-icon" />
                 <span class="small_text projects">demo</span>
@@ -255,3 +255,46 @@ const projectSec = projectsInfo.map((projects, key) => {
 });
 
 projectContainer.innerHTML = projectSec.join(" ");
+
+/* SCROLL FUNCTIONALITY */
+const animationUp = document.querySelectorAll(".animations_up");
+const animationDown = document.querySelectorAll(".animations_down");
+const animationLeft = document.querySelectorAll(".animations_left");
+const animationRight = document.querySelectorAll(".animations_right");
+
+const scrollObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("scroll-animation");
+      } else {
+        entry.target.classList.remove("scroll-animation");
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+for (let i = 0; i < animationUp.length; i++) {
+  const elements = animationUp[i];
+
+  scrollObserver.observe(elements);
+}
+/*  */
+for (let i = 0; i < animationDown.length; i++) {
+  const elements = animationDown[i];
+
+  scrollObserver.observe(elements);
+}
+/*  */
+for (let i = 0; i < animationLeft.length; i++) {
+  const elements = animationLeft[i];
+
+  scrollObserver.observe(elements);
+}
+/*  */
+for (let i = 0; i < animationRight.length; i++) {
+  const elements = animationRight[i];
+
+  scrollObserver.observe(elements);
+}
