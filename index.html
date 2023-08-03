@@ -33,31 +33,32 @@
     <div class="light_main_bg">
       <!-- NAVBAR -->
       <header id="nav_sec">
-        <div class="navbar">
+        <div class="navbar animations_up">
           <div class="navbar_inner">
             <a href="#">
-              <div class="logo">
+              <div class="logo animations_up">
                 <p><span>opuz</span>moses</p>
               </div>
             </a>
 
-            <div class="menu_items">
+            <div class="menu_items animations_up">
               <ul>
-                <a href="#about_id">
+                <a class="animations_left" href="#about_id">
                   <li>About</li>
                 </a>
-                <a href="#skills_id">
+                <a class="animations_left" href="#skills_id">
                   <li>Skills</li>
                 </a>
-                <a href="#projects_id">
+                <a class="animations_left" href="#projects_id">
                   <li>Projects</li>
                 </a>
               </ul>
             </div>
 
-            <div class="contact_items">
+            <div class="contact_items animations_left">
               <ul>
                 <a
+                  class="animations_left"
                   href="https://www.linkedin.com/in/moses-opusunju/"
                   target="_blank"
                 >
@@ -67,14 +68,18 @@
                   </li>
                 </a>
 
-                <a href="https://github.com/Mozibix" target="_blank">
+                <a
+                  class="animations_left"
+                  href="https://github.com/Mozibix"
+                  target="_blank"
+                >
                   <li>
                     <img src="./svgs/github.svg" alt="github" />
                     <span> Github </span>
                   </li>
                 </a>
 
-                <a href="#footer_id">
+                <a class="animations_left" href="#footer_id">
                   <li class="contact_me">
                     <span class="blank"></span>
                     <span class="index"> say hi👋️ </span>
@@ -92,20 +97,21 @@
         <!--       DROPDOWN MENU       -->
 
         <div class="dropdown_menu">
-          <ul>
-            <a href="#about_id">
+          <ul class="animations_left">
+            <a class="animations_left" href="#about_id">
               <li>About</li>
             </a>
 
-            <a href="#skills_id">
+            <a class="animations_left" href="#skills_id">
               <li>Skills</li>
             </a>
 
-            <a href="#projects_id">
+            <a class="animations_left" href="#projects_id">
               <li>Projects</li>
             </a>
 
             <a
+              class="animations_left"
               href="https://www.linkedin.com/in/moses-opusunju/"
               target="_blank"
             >
@@ -115,14 +121,18 @@
               </li>
             </a>
 
-            <a href="https://github.com/Mozibix" target="_blank">
+            <a
+              class="animations_left"
+              href="https://github.com/Mozibix"
+              target="_blank"
+            >
               <li>
                 <img src="./svgs/github.svg" alt="github" />
                 <span> Github </span>
               </li>
             </a>
 
-            <a href="#footer_id">
+            <a class="animations_left" href="#footer_id">
               <li class="dropdown_contact_me">
                 <span class="dropdown_blank"></span>
                 <span class="dropdown_index">
@@ -139,17 +149,17 @@
       <div class="hero">
         <div class="hero_inner">
           <div class="hero_top">
-            <div class="hero_top_left">
-              <p>
+            <div class="hero_top_left animations_left">
+              <p class="animations_left">
                 Hi<img id="gif" src="./gif/wave.gif" alt="wave" />, i'm
                 <br />
               </p>
               <p>
-                <span class="primary_text big middle_text">
+                <span class="primary_text big middle_text animations_left">
                   < Opuz Moses /> <br />
                 </span>
               </p>
-              <p class="bold_text right_text font_prime">
+              <p class="bold_text right_text font_prime animations_down">
                 Frontend Dev<span
                   class="font_prime"
                   id="typewriter"
@@ -159,7 +169,7 @@
               </p>
             </div>
 
-            <div class="hero_top_right">
+            <div class="hero_top_right animations_left">
               <div class="hero_top_right_inner">
                 <img src="./svgs/Lukita.svg" alt="opuz-moses" />
               </div>
@@ -168,9 +178,11 @@
 
           <section id="about_id" class="hero_bottom">
             <div class="hero_bottom_left">
-              <h3 class="primary_text header_text">aboutMe<span>( )</span></h3>
+              <h3 class="primary_text header_text animations_down">
+                aboutMe<span>( )</span>
+              </h3>
 
-              <p class="small_text margin">
+              <p class="small_text margin animations_left">
                 I'm a frontend developer with specialization in React.js and
                 Next.js, I possess the knowledge and skills required to develop
                 high-performance, responsive, and user-friendly web
@@ -183,8 +195,8 @@
               </p>
             </div>
 
-            <div class="hero_bottom_right">
-              <div class="bottom_box">
+            <div class="hero_bottom_right animations_left">
+              <div class="bottom_box animations_up">
                 <div class="bottom_box_inner">
                   <div class="left_box">
                     <h3 class="box_header">Frontend Developer</h3>
@@ -196,7 +208,7 @@
                   </div>
                 </div>
               </div>
-              <div class="bottom_box">
+              <div class="bottom_box animations_down">
                 <div class="bottom_box_inner">
                   <div class="left_box">
                     <h3 class="box_header">Freelancer</h3>
@@ -218,21 +230,71 @@
 
     <section id="skills_id" class="skills_sec">
       <div class="skills_sec_inner container_main">
-        <h3 class="primary_text header_text">skills<span>( )</span></h3>
+        <h3 class="primary_text header_text animations_left">
+          skills<span>( )</span>
+        </h3>
 
         <div class="skills_logos">
-          <img src="./skills_logos/javascript.svg" alt="skill-logo" />
-          <img src="./skills_logos/react_logo.svg" alt="skill-logo" />
-          <img src="./skills_logos/redux_logo.svg" alt="skill-logo" />
-          <img src="./skills_logos/typescript_logo.svg" alt="skill-logo" />
-          <img src="./skills_logos/html_logo.svg" alt="skill-logo" />
-          <img src="./skills_logos/css_logo.svg" alt="skill-logo" />
-          <img src="./skills_logos/sass_logo.png" alt="skill-logo" />
-          <img src="./skills_logos/bootstrap_logo.svg" alt="skill-logo" />
-          <img src="./skills_logos/nextjs_logo.svg" alt="skill-logo" />
-          <img src="./skills_logos/nodejs_logo.svg" alt="skill-logo" />
-          <img src="./skills_logos/tailwindcss_logo.svg" alt="skill-logo" />
-          <img src="./skills_logos/styledcomponent_logo.svg" alt="skill-logo" />
+          <img
+            class="animations_up"
+            src="./skills_logos/javascript.svg"
+            alt="skill-logo"
+          />
+          <img
+            class="animations_down"
+            src="./skills_logos/react_logo.svg"
+            alt="skill-logo"
+          />
+          <img
+            class="animations_left"
+            src="./skills_logos/redux_logo.svg"
+            alt="skill-logo"
+          />
+          <img
+            class="animations_left"
+            src="./skills_logos/typescript_logo.svg"
+            alt="skill-logo"
+          />
+          <img
+            class="animations_up"
+            src="./skills_logos/html_logo.svg"
+            alt="skill-logo"
+          />
+          <img
+            class="animations_down"
+            src="./skills_logos/css_logo.svg"
+            alt="skill-logo"
+          />
+          <img
+            class="animations_left"
+            src="./skills_logos/sass_logo.png"
+            alt="skill-logo"
+          />
+          <img
+            class="animations_left"
+            src="./skills_logos/bootstrap_logo.svg"
+            alt="skill-logo"
+          />
+          <img
+            class="animations_down"
+            src="./skills_logos/nextjs_logo.svg"
+            alt="skill-logo"
+          />
+          <img
+            class="animations_up"
+            src="./skills_logos/nodejs_logo.svg"
+            alt="skill-logo"
+          />
+          <img
+            class="animations_left"
+            src="./skills_logos/tailwindcss_logo.svg"
+            alt="skill-logo"
+          />
+          <img
+            class="animations_left"
+            src="./skills_logos/styledcomponent_logo.svg"
+            alt="skill-logo"
+          />
         </div>
       </div>
     </section>
@@ -241,7 +303,9 @@
     <div class="projects_sec light_main_bg">
       <section id="projects_id"></section>
       <div class="projects_sec_inner container_main">
-        <h3 class="primary_text header_text">projects<span>( )</span></h3>
+        <h3 class="primary_text header_text animations_left">
+          projects<span>( )</span>
+        </h3>
 
         <!-- ALL PROJECTS SECTION -->
         <div class="projects_container light_main_bg none">
@@ -255,8 +319,8 @@
     <section id="footer_id">
       <div class="footer_inner footer_container">
         <i class="fa-solid fa-quote-left"></i>
-        <p class="say_hi box_header small_header">say hi</p>
-        <div class="footer_items">
+        <p class="say_hi box_header small_header animations_up">say hi</p>
+        <div class="footer_items animations_left">
           <ul>
             <a
               href="https://www.linkedin.com/in/moses-opusunju/"
