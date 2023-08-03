@@ -210,6 +210,60 @@ const projectsInfo = [
     class: "inverse",
   },
   /*  */
+  {
+    id: 3,
+    img_src: "./images/driving_school_view.jpg",
+    header: "Driving School",
+    quotes:
+      "The website template seems to provide a solid foundation for creating a driving school website.",
+    stacks: [
+      {
+        id: 1,
+        lang: "HTML",
+      },
+      {
+        id: 2,
+        lang: "SASS",
+      },
+      {
+        id: 3,
+        lang: "JAVASCRIPT",
+      },
+    ],
+    codes_link: "https://github.com/Mozibix/driving_school_template",
+    live_link: "https://driving-school-template.vercel.app",
+    class: "",
+  },
+  /*  */
+  {
+    id: 4,
+    img_src: "./images/nmu_pdf_app.png",
+    header: "NMU-PDF-APP",
+    quotes:
+      " A user-friendly web application that focuses on providing a convenient way for users to search, view, and potentially manage PDF files. Its clean design, intuitive interface, and potential additional features make it accessible and understandable for normal users.",
+    stacks: [
+      {
+        id: 1,
+        lang: "NEXT.JS",
+      },
+      {
+        id: 2,
+        lang: "TAILWIND",
+      },
+      {
+        id: 3,
+        lang: "SASS",
+      },
+      {
+        id: 4,
+        lang: "TYPESCRIPT",
+      },
+    ],
+    codes_link: "https://opuzmoses-dev.vercel.app",
+    live_link: "https://nmupdfapp.vercel.app",
+    class: "inverse",
+  },
+  /*  */
 ];
 
 const projectSec = projectsInfo.map((projects, key) => {
