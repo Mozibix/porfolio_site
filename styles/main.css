@@ -15,6 +15,7 @@ html {
 body {
   background: #000;
   color: white;
+  /* ---------------------------PRE-LOADER--------------------------- */
   /* --------------------------------------HEADER-------------------------------------- */
   /* --------------------------------------MAIN--------------------------------------  */
   /* --------------------------------SKILLS SECTION-------------------------------- */
@@ -43,6 +44,28 @@ body .dark_preview_bg {
   body .dark_preview_bg {
     background: transparent;
   }
+}
+body .preloader {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: #000;
+}
+body .preloader_inner {
+  position: absolute;
+  margin: -15em 0 0 -15em;
+  top: 50vh;
+  left: 50vw;
+}
+body .preloader.hidden {
+  opacity: 0;
+  z-index: -1000;
 }
 body header {
   position: relative;
