@@ -425,26 +425,25 @@ body {
           }
         }
         &.right_text {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           @media screen and (min-width: 576px) {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             display: flex;
             justify-content: flex-end;
           }
 
           @media screen and (min-width: 992px) {
-            font-size: 1.5rem;
             justify-content: flex-start;
           }
           @media screen and (min-width: 993px) {
             font-size: 2rem;
           }
           @media screen and (min-width: 1200px) {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             line-height: 6rem;
           }
           @media screen and (min-width: 1400px) {
-            font-size: 3rem;
+            font-size: 2.5rem;
           }
         }
       }
@@ -628,20 +627,13 @@ body {
   color: $primary;
 
   &.big {
-    font-size: 4rem;
+    font-size: 2rem;
 
     @media screen and (min-width: 400px) {
-      font-size: 3rem;
+      font-size: 2.2rem;
     }
     @media screen and (min-width: 1024px) {
       font-size: 3.5rem;
-    }
-
-    @media screen and (min-width: 1200px) {
-      font-size: 4.5rem;
-    }
-    @media screen and (min-width: 1600px) {
-      font-size: 5.5rem;
     }
   }
 
