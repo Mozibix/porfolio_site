@@ -322,20 +322,20 @@ const projectSec = projectsInfo.map((projects, key) => {
   return `
     <div class="projects_display" key=${key}>
       <div class=${classes}>
-        <div class="projects_top dark_preview_bg animations_left">
+        <div class="projects_top dark_preview_bg animations_up">
           <div class="projects_preview">
             <img src=${projects.img_src} alt="project-view" />
           </div>
         </div>
 
-        <div class="projects_bottom animations_left">
+        <div class="projects_bottom animations_up">
           <h4 class="box_header center animations_up">
           ${projects.header}
           </h4>
-          <div class="projects_quote small_text projects animations_down">
+          <div class="projects_quote small_text projects animations_up">
               ${projects.quotes}      
            </div>
-          <div class="projects_stack box_header small_header animations_left ">
+          <div class="projects_stack box_header small_header animations_up ">
           <ul> 
           ${stacks
             .map(({ lang }, id) => {
@@ -348,7 +348,7 @@ const projectSec = projectsInfo.map((projects, key) => {
           
           </div>
           <div class="projects_btn action_btns space">
-            <div class="git_btn animations_left">
+            <div class="git_btn animations_up">
               <a class="action_btns" href=${
                 projects.codes_link
               } target="_blank">
@@ -357,7 +357,7 @@ const projectSec = projectsInfo.map((projects, key) => {
               </a>
             </div>
 
-            <div class="live_btn animations_down">
+            <div class="live_btn animations_up">
               <a class="action_btns" href=${projects.live_link} target="_blank">
                 <img src="./svgs/external-link.svg" alt="livesite-icon" />
                 <span class="small_text projects">demo</span>
