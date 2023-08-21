@@ -270,10 +270,11 @@ const projectsInfo = [
     header: "UNIPORT SGS",
     quotes:
       "(UBUBA TECHNOLOGY)  Official website of Uniport School of Graduate Studies ",
+
     stacks: [
       {
         id: 1,
-        lang: "NEXT.JS",
+        lang: "HTML",
       },
       {
         id: 2,
@@ -311,6 +312,31 @@ const projectsInfo = [
     codes_link: "https://github.com/Mozibix",
     live_link: "https://www.uniport-sgs.com",
     class: "",
+  },
+  /*  */
+  {
+    id: 6,
+    img_src: "./images/ricketts_jobs.png",
+    header: "Ricketts Jobs",
+    quotes:
+      "(RE-DESIGNED RICKETTS-JOBS OFFICIAL SITE(url: https://rickettsjobs.com ) )  The proposed design is a blend of aesthetics and functionality, designed to captivate users, convey the brand's message, and drive desired actions. Its modernity, responsiveness, and user-centered approach make it an ideal choice for a dynamic and engaging landing page. ",
+    stacks: [
+      {
+        id: 1,
+        lang: "HTML",
+      },
+      {
+        id: 2,
+        lang: "SASS",
+      },
+      {
+        id: 3,
+        lang: "JAVASCRIPT",
+      },
+    ],
+    codes_link: "https://github.com/Mozibix/ricketts_jobs",
+    live_link: "https://ricketts-jobs.vercel.app",
+    class: "inverse",
   },
   /*  */
 ];
