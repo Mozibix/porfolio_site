@@ -374,7 +374,7 @@ const projectSec = projectsInfo.map((projects, key) => {
           
           </div>
           <div class="projects_btn action_btns space">
-            <div class="git_btn animations_up">
+            <div class="git_btn">
               <a class="action_btns" href=${
                 projects.codes_link
               } target="_blank">
@@ -383,7 +383,7 @@ const projectSec = projectsInfo.map((projects, key) => {
               </a>
             </div>
 
-            <div class="live_btn animations_up">
+            <div class="live_btn">
               <a class="action_btns" href=${projects.live_link} target="_blank">
                 <img src="./svgs/external-link.svg" alt="livesite-icon" />
                 <span class="small_text projects">demo</span>
